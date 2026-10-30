@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+coverage/
+test-results/
+playwright-report/
+artifacts/
+.agent-context/
+data/*.tmp

@@ -1,0 +1,1514 @@
+{
+  "updated": "2026-10-30",
+  "entries": [
+    {
+      "id": "1901-physics",
+      "title": "Seeing through matter",
+      "summary": "Wilhelm Röntgen discovered a previously unknown radiation that could penetrate opaque objects. X-rays made it possible to examine the inside of a body without opening it.",
+      "impact": "The discovery gave medicine a new way to investigate injury and disease, while providing physicists with a powerful experimental tool.",
+      "detail": "Röntgen noticed a nearby screen glowing while he experimented with a covered discharge tube. The unexpected radiation could pass through materials that stopped visible light. The prize recognised this discovery, rather than the many later imaging techniques built from it.",
+      "topics": [
+        "Light & imaging"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1901/rontgen/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1903-physics",
+      "title": "Atoms reveal radioactivity",
+      "summary": "Henri Becquerel discovered spontaneous radioactivity. Pierre and Marie Curie investigated the phenomenon, tracing unusually strong emissions from minerals to previously unknown radioactive elements.",
+      "impact": "Matter itself became a new object of investigation: atoms could emit energy without an external light source. Radioactivity opened a field spanning physics, chemistry and medicine.",
+      "detail": "The Curies found pitchblende more radioactive than its uranium content could explain. Their separation work revealed polonium and radium. This physics award recognised radioactivity research; Marie Curie’s later chemistry award recognised further work on the elements themselves.",
+      "topics": [
+        "Atoms & particles"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1911-chemistry",
+      "title": "Isolating radium",
+      "summary": "Marie Curie received a second Nobel Prize for discovering radium and polonium, isolating radium, and studying the properties and compounds of these radioactive elements.",
+      "impact": "Isolating and characterising radioactive materials made them available for chemical research and for medical uses of radiation, including the treatment of tumours.",
+      "detail": "The 1903 physics award had recognised investigations of radioactivity. This chemistry prize recognised the substances behind it. Curie’s preparation of metallic radium in 1910 provided further evidence that radium was a distinct element.",
+      "topics": [
+        "Atoms & particles"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1911/marie-curie/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1918-chemistry",
+      "title": "Making fertiliser from air",
+      "summary": "Fritz Haber found a practical chemical route for combining atmospheric nitrogen with hydrogen to make ammonia, a starting material for synthetic nitrogen fertilisers.",
+      "impact": "The discovery made a vast atmospheric resource chemically usable. Turning the laboratory reaction into reliable industrial production required the later high-pressure engineering recognised in 1931.",
+      "detail": "Nitrogen gas is abundant but chemically difficult to use. Haber controlled temperature, pressure and catalysts to produce ammonia. The award recognised this synthesis; its importance for fertiliser must be considered separately from Haber’s wartime activities.",
+      "topics": [
+        "Energy & materials",
+        "Climate & environment"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1918/haber/facts/"
+        },
+        {
+          "title": "NobelPrize.org: Fritz Haber’s scientific and wartime biography",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1918/haber/biographical/"
+        }
+      ],
+      "reassessment": {
+        "kind": "ethical",
+        "title": "A productive chemistry, a destructive wartime role",
+        "text": "Haber organised chemical-warfare attacks and defences during the First World War, as his Nobel biography records. This is an ethical reassessment of the scientist’s activities and the uses of chemistry. It does not overturn the ammonia synthesis for which he received the prize.",
+        "sources": [
+          {
+            "title": "NobelPrize.org: Fritz Haber’s scientific and wartime biography",
+            "url": "https://www.nobelprize.org/prizes/chemistry/1918/haber/biographical/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1931-chemistry",
+      "title": "Chemistry under pressure",
+      "summary": "Carl Bosch and Friedrich Bergius developed high-pressure chemical methods: Bosch industrialised ammonia synthesis, while Bergius used hydrogen under pressure to turn coal into liquid fuels.",
+      "impact": "Their work connected laboratory chemistry to industrial production. It showed that pressure vessels, heat-resistant materials and process engineering could be as decisive as discovering a reaction.",
+      "detail": "Bosch solved materials and equipment problems that made Haber’s ammonia synthesis usable at scale. Bergius developed a separate coal-hydrogenation process. The shared award recognised high-pressure chemistry across these applications, rather than a single joint invention.",
+      "topics": [
+        "Energy & materials"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1931/bosch/facts/"
+        },
+        {
+          "title": "NobelPrize.org: Friedrich Bergius’s contribution",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1931/bergius/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1918-physics",
+      "title": "Energy comes in quanta",
+      "summary": "Max Planck explained the spectrum emitted by hot objects by introducing discrete units of energy. His work supplied the constant that became central to quantum physics.",
+      "impact": "The new description broke with a wholly continuous picture of energy exchange and supplied an essential starting point for later theories of light and atoms.",
+      "detail": "Classical calculations could not correctly reproduce thermal radiation across all frequencies. Planck’s 1900 treatment introduced energy quanta whose size depends on frequency. Later quantum theories developed far beyond this original problem, while retaining Planck’s constant.",
+      "topics": [
+        "Quantum physics",
+        "Light & imaging"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1918/planck/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1921-physics",
+      "title": "Light delivers packets of energy",
+      "summary": "Albert Einstein explained the photoelectric effect using light quanta: light can release an electron only when each packet carries sufficient energy, which depends on its frequency.",
+      "impact": "The result helped establish the quantum description of light and explained why simply making low-frequency light brighter could not reproduce the effect of higher-frequency light.",
+      "detail": "The prize citation particularly singled out the photoelectric law. Although Einstein is also celebrated for relativity, this award should not be labelled a prize for general relativity. Those are different contributions with different experimental histories.",
+      "topics": [
+        "Quantum physics",
+        "Light & imaging"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1922-physics",
+      "title": "An atom with energy levels",
+      "summary": "Niels Bohr developed a model in which electrons occupy particular energy states. Transitions between states explained why hydrogen emits light at specific wavelengths.",
+      "impact": "The model made atomic spectra intelligible and connected the structure of matter with quantum ideas. It became a stepping stone towards a broader quantum mechanics.",
+      "detail": "Bohr’s model was especially successful for hydrogen. Its prescribed electron orbits were later replaced by more general quantum descriptions. That development refined an important model; it does not mean the useful explanation of hydrogen spectra was simply worthless.",
+      "topics": [
+        "Quantum physics",
+        "Atoms & particles"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1922/bohr/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1932-physics",
+      "title": "Quantum mechanics replaces simple orbits",
+      "summary": "Werner Heisenberg formulated quantum mechanics using matrices, helping move beyond the limited atomic models that had described electrons in fixed orbits.",
+      "impact": "The new framework could address atomic behaviour more generally. It also changed what a physical theory could predict about measurements at very small scales.",
+      "detail": "Bohr’s model described hydrogen well but struggled with more complicated systems. Heisenberg’s 1925 formulation used mathematical relations between observable quantities. His subsequent uncertainty relation expressed limits on simultaneously specifying complementary properties such as position and momentum.",
+      "topics": [
+        "Quantum physics",
+        "Atoms & particles"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1932/heisenberg/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1964-physics",
+      "title": "Coherent light on demand",
+      "summary": "Charles Townes, Nicolay Basov and Aleksandr Prokhorov developed quantum-electronic principles underlying masers and lasers, which amplify radiation into concentrated, coherent beams.",
+      "impact": "Masers and lasers turned atomic energy transitions into controllable instruments. Their principles became tools for precision measurement and scientific experiments, including later gravitational-wave detectors.",
+      "detail": "In stimulated emission, an incoming photon can induce an excited atom to release another photon with matching energy. Maintaining enough atoms in excited states allows amplification. Masers work with microwaves, while lasers apply related principles to light.",
+      "topics": [
+        "Quantum physics",
+        "Light & imaging"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1964/townes/facts/"
+        }
+      ]
+    },
+    {
+      "id": "2014-physics",
+      "title": "The missing blue light",
+      "summary": "Isamu Akasaki, Hiroshi Amano and Shuji Nakamura developed efficient blue light-emitting diodes, enabling practical bright white LED lighting.",
+      "impact": "Blue LEDs completed a crucial part of the lighting toolkit. Their efficiency and durability made them a route to lower electricity use for illumination.",
+      "detail": "Red and green LEDs existed before efficient blue ones. Producing blue light from semiconductor materials remained difficult for decades. The laureates’ advances in the early 1990s enabled new white-light sources; this was a semiconductor achievement, not the invention of light itself.",
+      "topics": [
+        "Light & imaging",
+        "Energy & materials"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/2014/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "1974-physics",
+      "title": "Sharper radio skies and pulsars",
+      "summary": "Martin Ryle developed radio-astronomy observations and aperture synthesis. Antony Hewish was recognised for his role in discovering pulsars, regularly pulsing radio sources associated with neutron stars.",
+      "impact": "Radio techniques made the universe visible in a new way. Combining telescope observations improved resolution, while pulsars became laboratories for extreme matter and magnetic fields.",
+      "detail": "The prize combined two contributions. Ryle’s methods synthesised the resolving power of a large instrument from smaller telescopes. Hewish’s pulsar work was part of a team discovery whose crucial observational contribution by Jocelyn Bell Burnell raises a separate question about recognition.",
+      "topics": [
+        "Light & imaging",
+        "Atoms & particles"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1974/press-release/"
+        }
+      ],
+      "reassessment": {
+        "kind": "credit",
+        "title": "Jocelyn Bell Burnell’s discovery",
+        "text": "Jocelyn Bell Burnell discovered the first pulsar during her doctoral research, but the Nobel went to her supervisor Antony Hewish and to Martin Ryle. Her omission is a question about credit within collaborative science. It does not invalidate pulsars or Ryle’s separate aperture-synthesis work.",
+        "sources": [
+          {
+            "title": "University of Oxford: Jocelyn Bell Burnell and pulsars",
+            "url": "https://podcasts.ox.ac.uk/index.php/people/jocelyn-bell-burnell"
+          },
+          {
+            "title": "NobelPrize.org: award background",
+            "url": "https://www.nobelprize.org/prizes/physics/1974/press-release/"
+          },
+          {
+            "title": "University of Oxford: Jocelyn Bell Burnell’s discovery of the first pulsar",
+            "url": "https://www.hertford.ox.ac.uk/wp-content/uploads/2021/11/Profiles-Unsung-Heroes-of-Science.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2017-physics",
+      "title": "Listening to spacetime",
+      "summary": "Rainer Weiss, Barry Barish and Kip Thorne were recognised for decisive contributions to LIGO and the observation of gravitational waves from colliding black holes.",
+      "impact": "The detection opened a way to observe cosmic events through distortions of spacetime rather than electromagnetic radiation. It depended on a large international collaboration and decades of instrument development.",
+      "detail": "LIGO compares light travelling along perpendicular paths to detect extraordinarily small changes in distance. Its first gravitational-wave observation occurred in 2015. The prize recognised key leadership and scientific contributions within a collaboration of more than a thousand researchers.",
+      "topics": [
+        "Light & imaging",
+        "Atoms & particles"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/2017/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "1905-medicine",
+      "title": "Finding the cause of tuberculosis",
+      "summary": "Robert Koch identified and studied the bacterium responsible for tuberculosis. His investigations helped turn an often deadly disease into a problem that could be studied experimentally.",
+      "impact": "Linking a specific microorganism to a disease strengthened the experimental study of infection and gave later work on diagnosis, prevention and treatment a firmer foundation.",
+      "detail": "Koch described the tuberculosis bacterium in 1882. Not all of his subsequent ideas succeeded: tuberculin did not become the cure he hoped for. A scientist can make an award-winning discovery while also pursuing interpretations or treatments that later fail.",
+      "topics": [
+        "Infection & immunity"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1905/koch/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1926-medicine",
+      "title": "The cancer-causing worm that was not",
+      "summary": "Johannes Fibiger was honoured for experiments interpreted as showing that a parasitic worm caused stomach cancer in rats. Later investigation overturned that central interpretation.",
+      "impact": "The case illustrates why an apparently compelling animal experiment needs independent reproduction, careful disease classification, and control of diet and other confounding factors.",
+      "detail": "Fibiger infected rats through cockroaches carrying worm larvae. Later studies distinguished the resulting tissue changes from cancer and identified nutritional deficiency as a confounder. This failed claim should not be confused with the well-established fact that some infections can cause cancer.",
+      "topics": [
+        "Infection & immunity"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1926/fibiger/facts/"
+        },
+        {
+          "title": "Hitchcock and Bell (1952): comparison with Fibiger’s results",
+          "url": "https://doi.org/10.1093/jnci/12.6.1345"
+        },
+        {
+          "title": "Lichtman (2017): A Bacterial Cause of Cancer, historical analysis",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5423514/"
+        }
+      ],
+      "reassessment": {
+        "kind": "overturned",
+        "title": "The lesions were not the claimed cancers",
+        "text": "Later work failed to confirm Fibiger’s claimed cancer model. Investigators identified nonmalignant tissue changes and the role of vitamin A deficiency, rather than demonstrating that his worm caused stomach cancer. This is a reassessment of the actual prize-winning claim, not merely of its applications.",
+        "sources": [
+          {
+            "title": "Hitchcock and Bell (1952): comparison with Fibiger’s results",
+            "url": "https://doi.org/10.1093/jnci/12.6.1345"
+          },
+          {
+            "title": "Lichtman (2017): A Bacterial Cause of Cancer, historical analysis",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5423514/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1945-medicine",
+      "title": "Turning penicillin into treatment",
+      "summary": "Alexander Fleming discovered penicillin’s antibacterial action. Ernst Boris Chain and Howard Florey helped develop it into a usable treatment, with their colleagues solving major production and purification problems.",
+      "impact": "The work made an antibacterial observation into a medicine that could be manufactured and used. It demonstrates how discovery and practical development contribute different essentials to medical progress.",
+      "detail": "Fleming observed the effect of a mould in 1928. Penicillin was difficult to isolate and unstable, so it did not immediately become a widely usable drug. The later Oxford work and further production efforts were crucial to that transformation.",
+      "topics": [
+        "Infection & immunity"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1945/florey/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1948-medicine",
+      "title": "DDT controls insects—and leaves a legacy",
+      "summary": "Paul Müller discovered DDT’s powerful insecticidal action. It helped control insects transmitting diseases, while widespread use later revealed serious environmental costs.",
+      "impact": "The award captures a tension between immediate public-health benefits and persistent ecological harm. An effective technology can require major restrictions as its wider effects become understood.",
+      "detail": "DDT acted against insects involved in malaria and typhus transmission. Its persistence, accumulation in organisms and effects on wildlife changed the assessment of broad use. Recognising these harms does not require denying the insecticidal effect originally rewarded.",
+      "topics": [
+        "Infection & immunity",
+        "Climate & environment"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1948/muller/facts/"
+        },
+        {
+          "title": "US EPA: DDT history, environmental effects and restrictions",
+          "url": "https://www.epa.gov/ingredients-used-pesticide-products/ddt-brief-history-and-status"
+        }
+      ],
+      "reassessment": {
+        "kind": "harmful",
+        "title": "Effective insect control, serious environmental harm",
+        "text": "DDT persists in the environment, accumulates in fatty tissues and can damage wildlife. The US EPA cancelled most uses in 1972; international restrictions retain a limited disease-vector-control exemption. The revised judgment concerns harms and appropriate uses, not a finding that DDT never killed insects.",
+        "sources": [
+          {
+            "title": "US EPA: DDT history, environmental effects and restrictions",
+            "url": "https://www.epa.gov/ingredients-used-pesticide-products/ddt-brief-history-and-status"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1949-medicine",
+      "title": "Brain function and lobotomy",
+      "summary": "Walter Hess mapped how brain regions coordinate internal functions. Egas Moniz received the other half of the prize for leucotomy, a psychiatric operation later associated with serious harms.",
+      "impact": "The shared award contains two distinct stories: experimental mapping of brain function and a treatment whose effects and justification were reassessed. They should be examined separately.",
+      "detail": "Hess used electrical stimulation to investigate the diencephalon’s role in behaviour and bodily regulation. Moniz severed connections in the frontal brain to treat some psychiatric conditions. Lobotomy became widespread before its serious consequences and the arrival of medicines led to declining use.",
+      "topics": [
+        "Neuroscience"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1949/moniz/facts/"
+        },
+        {
+          "title": "NobelPrize.org: Walter Hess’s separate contribution",
+          "url": "https://www.nobelprize.org/prizes/medicine/1949/hess/facts/"
+        }
+      ],
+      "reassessment": {
+        "kind": "harmful",
+        "title": "Moniz’s half: damaging psychiatric surgery",
+        "text": "Leucotomy and related lobotomy procedures could cause profound personality changes. Their use declined as those consequences became clearer and psychiatric medicines became available. This reassessment applies to the Moniz share of the 1949 award; it does not make Hess’s separate brain-function research an incorrect discovery.",
+        "sources": [
+          {
+            "title": "NobelPrize.org: award background",
+            "url": "https://www.nobelprize.org/prizes/medicine/1949/moniz/facts/"
+          },
+          {
+            "title": "NobelPrize.org: Walter Hess’s separate contribution",
+            "url": "https://www.nobelprize.org/prizes/medicine/1949/hess/facts/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1962-medicine",
+      "title": "The structure of genetic information",
+      "summary": "Francis Crick, James Watson and Maurice Wilkins were recognised for discoveries about nucleic-acid structure and information transfer, including DNA’s double helix and complementary base pairing.",
+      "impact": "The structure suggested how genetic information could be copied. It gave molecular biology a physical framework for asking how inherited instructions are stored and used.",
+      "detail": "X-ray diffraction data, including Rosalind Franklin and Raymond Gosling’s work, were crucial to the structural problem. Complementary base pairing explained how each DNA strand could template another. Subsequent research decoded how the sequence directs protein production.",
+      "topics": [
+        "DNA & genetics",
+        "Light & imaging"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1962/speedread/"
+        },
+        {
+          "title": "King’s College London: Rosalind Franklin and Photograph 51",
+          "url": "https://www.kcl.ac.uk/people/rosalind-franklin"
+        }
+      ],
+      "reassessment": {
+        "kind": "credit",
+        "title": "Rosalind Franklin’s essential contribution",
+        "text": "Franklin and her student Raymond Gosling produced key diffraction evidence, including Photograph 51. King’s College London records that the photograph was shown to Watson without Franklin’s knowledge. She died in 1958, before the 1962 award. The reassessment concerns how her work was used and credited, not the validity of DNA’s structure.",
+        "sources": [
+          {
+            "title": "King’s College London: Rosalind Franklin and Photograph 51",
+            "url": "https://www.kcl.ac.uk/people/rosalind-franklin"
+          },
+          {
+            "title": "King’s College London: interpreting Franklin’s contested legacy",
+            "url": "https://www.kcl.ac.uk/telling-franklins-story"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1968-medicine",
+      "title": "Reading the genetic code",
+      "summary": "Robert Holley, Har Gobind Khorana and Marshall Nirenberg explained how genetic information is translated into proteins, connecting the nucleotide alphabet to amino acids.",
+      "impact": "Knowing DNA’s shape was not enough: researchers needed to understand its instructions. Deciphering the code connected inherited information to the molecules that perform much of a cell’s work.",
+      "detail": "Nirenberg’s RNA experiments revealed an early code assignment; Khorana used synthetic RNA to establish more of the code. Holley isolated and determined the structure of a transfer RNA, helping explain how amino acids reach the protein-making machinery.",
+      "topics": [
+        "DNA & genetics"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1968/nirenberg/facts/"
+        },
+        {
+          "title": "NobelPrize.org: Robert Holley and transfer RNA",
+          "url": "https://www.nobelprize.org/prizes/medicine/1968/holley/facts/"
+        },
+        {
+          "title": "NobelPrize.org: Har Gobind Khorana and the genetic code",
+          "url": "https://www.nobelprize.org/prizes/medicine/1968/khorana/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1978-medicine",
+      "title": "Molecular tools for cutting DNA",
+      "summary": "Werner Arber, Hamilton Smith and Daniel Nathans discovered restriction enzymes and showed how these sequence-sensitive DNA cutters could be used to investigate genes.",
+      "impact": "Researchers could divide DNA into defined fragments, map it, and analyse its organisation. These enzymes supplied essential tools for the emerging practice of genetic engineering.",
+      "detail": "Restriction systems help bacteria respond to foreign DNA. Arber developed the explanation, Smith characterised a sequence-specific enzyme, and Nathans demonstrated powerful applications to genetics. Different enzymes recognise different sequence patterns, making the cuts useful and reproducible.",
+      "topics": [
+        "DNA & genetics",
+        "Infection & immunity"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1978/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "1980-chemistry",
+      "title": "Reading and recombining DNA",
+      "summary": "Paul Berg pioneered recombinant DNA, while Walter Gilbert and Frederick Sanger developed ways to determine nucleotide sequences. The award recognised both rearranging genetic material and reading it.",
+      "impact": "The methods made DNA’s sequence and function experimentally accessible. Researchers could investigate genes in greater detail and combine DNA from different sources.",
+      "detail": "Berg constructed DNA molecules containing material from different organisms. Gilbert and Sanger developed distinct sequencing approaches. These were complementary advances: knowing a sequence helps interpret and plan the construction of recombinant molecules.",
+      "topics": [
+        "DNA & genetics"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1980/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "1993-chemistry",
+      "title": "Copying DNA and changing proteins",
+      "summary": "Kary Mullis invented PCR, a method for amplifying selected DNA. Michael Smith developed site-directed mutagenesis, allowing researchers to make chosen genetic changes and study their effects.",
+      "impact": "PCR made tiny DNA samples far easier to analyse. Controlled mutation helped connect particular sequence changes with protein function, expanding the practical toolkit of molecular biology.",
+      "detail": "PCR repeatedly copies a chosen stretch of DNA to produce many more copies. Smith’s work used designed oligonucleotides to introduce specific mutations. These separate halves of the prize enabled different tasks: increasing material and testing what sequence changes do.",
+      "topics": [
+        "DNA & genetics"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1993/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "2020-chemistry",
+      "title": "Programmable genetic scissors",
+      "summary": "Emmanuelle Charpentier and Jennifer Doudna developed CRISPR-Cas9 as a programmable genome-editing method, adapting a bacterial defence system into a tool for cutting DNA at chosen sites.",
+      "impact": "The work made targeted genetic changes much more accessible to researchers. It accelerated experiments in basic biology, agriculture and investigations of new medical approaches.",
+      "detail": "Charpentier’s work on tracrRNA helped explain a bacterial immune system. Together, the laureates reconstructed and simplified the cutting machinery, then showed it could be retargeted. The 2012 discovery concerned the editing method; any particular application needs its own assessment.",
+      "topics": [
+        "DNA & genetics",
+        "Infection & immunity"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2020/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "2005-medicine",
+      "title": "A bacterium behind many stomach ulcers",
+      "summary": "Barry Marshall and Robin Warren showed that Helicobacter pylori plays a causal role in gastritis and peptic ulcer disease, challenging an emphasis on stress and lifestyle.",
+      "impact": "For ulcers caused by this infection, addressing the bacterium changed the prospect of lasting treatment. The discovery connected pathology, culture experiments and clinical evidence.",
+      "detail": "Warren observed bacteria alongside inflamed stomach tissue. Marshall cultured the organism, and further studies connected infection with disease. H. pylori also contributes to some stomach cancers. The finding does not mean every ulcer is bacterial or every infected person becomes ill.",
+      "topics": [
+        "Infection & immunity"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/2005/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "2015-medicine",
+      "title": "Treating diseases caused by parasites",
+      "summary": "William Campbell and Satoshi Ōmura discovered avermectin-based treatments for parasitic worms. Tu Youyou discovered artemisinin, providing a different therapeutic approach against malaria parasites.",
+      "impact": "These discoveries supplied important treatments for diseases affecting large populations. They also show how research on soil microbes and medicinal plants can produce specific, testable medicines.",
+      "detail": "Ōmura’s bacterial cultures led to Campbell’s identification of avermectin and the development of ivermectin. Tu isolated an effective compound from Artemisia annua. The award concerns particular antiparasitic discoveries, not a general endorsement of either drug for unrelated illnesses.",
+      "topics": [
+        "Infection & immunity"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/2015/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "2023-medicine",
+      "title": "Making mRNA useful for vaccination",
+      "summary": "Katalin Karikó and Drew Weissman discovered how modified RNA building blocks can reduce unwanted inflammatory responses and improve protein production, enabling effective mRNA vaccines against COVID-19.",
+      "impact": "Their work removed major obstacles to using manufactured mRNA in medicine. Vaccine development also required delivery systems, testing, manufacturing and the contributions of many other teams.",
+      "detail": "Messenger RNA carries instructions that cells translate into proteins. Laboratory-made RNA could provoke problematic immune responses. The laureates showed that certain base modifications changed those responses; subsequent work also demonstrated improved production of the encoded protein.",
+      "topics": [
+        "DNA & genetics",
+        "Infection & immunity"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/2023/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "1901-peace",
+      "title": "Humanitarian protection and arbitration",
+      "summary": "Henry Dunant was recognised for humanitarian work associated with the Red Cross. Frédéric Passy was honoured for promoting peace conferences, diplomacy and arbitration.",
+      "impact": "The first Peace Prize connected two approaches: alleviating suffering during war and building institutions to prevent or resolve conflict between states.",
+      "detail": "After witnessing suffering at Solferino, Dunant proposed organised aid for wounded soldiers regardless of side. Passy promoted international cooperation and helped establish the Inter-Parliamentary Union. Their shared prize recognised different routes towards a less violent world.",
+      "topics": [
+        "Peace & human rights"
+      ],
+      "sources": [
+        {
+          "title": "Norwegian Nobel Committee: 1901 laureates",
+          "url": "https://www.nobelpeaceprize.org/laureates/1901"
+        }
+      ]
+    },
+    {
+      "id": "1964-peace",
+      "title": "Civil rights through nonviolence",
+      "summary": "Martin Luther King Jr. was recognised for his nonviolent struggle against racial discrimination and for civil rights for African Americans in the United States.",
+      "impact": "The prize presented the struggle for racial equality as part of peace work. Organised nonviolent action sought political and legal change despite violent opposition.",
+      "detail": "King’s campaigns included the Montgomery bus boycott era and the 1963 March on Washington. Influenced by Gandhi’s philosophy, he connected civil rights with social justice. The award recognised a movement’s goals through one of its leading figures.",
+      "topics": [
+        "Peace & human rights"
+      ],
+      "sources": [
+        {
+          "title": "Norwegian Nobel Committee: Martin Luther King Jr.",
+          "url": "https://www.nobelpeaceprize.org/laureates/1964"
+        }
+      ]
+    },
+    {
+      "id": "1973-peace",
+      "title": "A ceasefire with a contested outcome",
+      "summary": "Henry Kissinger and Le Duc Tho were awarded the prize for negotiating a Vietnam ceasefire. Le Duc Tho refused it, and the decision triggered resignations from the committee.",
+      "impact": "The award exposes the difficulty of judging peace negotiations while events are still unfolding. A signed agreement, the conduct of negotiators and a durable peace are separate questions.",
+      "detail": "The January agreement followed negotiations alongside severe military pressure. The committee records bombing controversies, Le Duc Tho’s refusal and two members’ resignations. The prize did not establish that conflict had ended.",
+      "topics": [
+        "Peace & human rights"
+      ],
+      "sources": [
+        {
+          "title": "Norwegian Nobel Committee: the 1973 prize",
+          "url": "https://www.nobelpeaceprize.org/laureates/1973"
+        }
+      ],
+      "reassessment": {
+        "kind": "debated",
+        "title": "Negotiation did not settle the judgment",
+        "text": "Le Duc Tho declined because the truce was being violated. Two committee members resigned in protest. The committee’s own account records the tension between Kissinger’s negotiating role and the bombing campaign. This is a documented political controversy, not a scientific error.",
+        "sources": [
+          {
+            "title": "Norwegian Nobel Committee: the 1973 prize",
+            "url": "https://www.nobelpeaceprize.org/laureates/1973"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1993-peace",
+      "title": "Negotiating an end to apartheid",
+      "summary": "Nelson Mandela and F. W. de Klerk were recognised for work towards ending apartheid peacefully and establishing the foundations of a democratic South Africa.",
+      "impact": "The award supported a negotiated transition away from institutional racial oppression. It linked peace with political equality and the creation of a new democratic order.",
+      "detail": "The committee emphasised their agreement on principles including equal voting rights. Its announcement also acknowledged earlier laureates Albert Lutuli and Desmond Tutu. The prize was awarded during the transition, expressing support for a process that still faced major challenges.",
+      "topics": [
+        "Peace & human rights"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/peace/1993/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "2009-peace",
+      "title": "Diplomacy rewarded early",
+      "summary": "Barack Obama received the prize for efforts to strengthen diplomacy and international cooperation. The committee especially highlighted multilateral engagement and his vision of a world without nuclear weapons.",
+      "impact": "The award illustrates a recurring question for the Peace Prize: should it recognise completed achievements, or encourage an emerging direction in international politics?",
+      "detail": "The committee’s announcement praised a change in diplomatic approach and a renewed emphasis on negotiation. Obama’s acceptance lecture acknowledged the controversy, his limited record at that early stage, and the tension of receiving a peace award while leading a country at war.",
+      "topics": [
+        "Peace & human rights"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/peace/2009/press-release/"
+        },
+        {
+          "title": "Barack Obama’s 2009 Nobel lecture",
+          "url": "https://www.nobelprize.org/prizes/peace/2009/obama/lecture/"
+        }
+      ],
+      "reassessment": {
+        "kind": "debated",
+        "title": "Recognition before a long record of results",
+        "text": "In his own Nobel lecture, Obama acknowledged that he was near the beginning of his work on the world stage and that others had accomplished more. The dispute concerned timing, expectations and the gap between diplomatic ambition and demonstrated results. It is not an objectively disproven discovery.",
+        "sources": [
+          {
+            "title": "Barack Obama’s 2009 Nobel lecture",
+            "url": "https://www.nobelprize.org/prizes/peace/2009/obama/lecture/"
+          },
+          {
+            "title": "NobelPrize.org: award background",
+            "url": "https://www.nobelprize.org/prizes/peace/2009/press-release/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1954-literature",
+      "title": "The power of spare prose",
+      "summary": "Ernest Hemingway was honoured for narrative mastery, with particular attention to The Old Man and the Sea, and for his influence on contemporary prose.",
+      "impact": "His concise style offered a way to give emotional weight to what a story leaves unstated. The award recognised a literary achievement rather than a scientific proposition.",
+      "detail": "Hemingway’s fiction explores subjects including war, love, wilderness and loss. The Swedish Academy singled out a late work while acknowledging a broader influence on storytelling. Literary judgments concern language, form and experience and cannot be assessed like experimental claims.",
+      "topics": [
+        "Literature & language"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/1954/hemingway/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1962-literature",
+      "title": "Stories of displacement and inequality",
+      "summary": "John Steinbeck was recognised for imaginative and realistic writing that joined sympathy and humour with attention to social conditions, particularly the lives of poor and displaced people.",
+      "impact": "His fiction made economic insecurity and unequal power vivid through individual lives. Readers encounter social questions through characters and narrative rather than through statistical models.",
+      "detail": "Of Mice and Men and The Grapes of Wrath centre people exposed to precarious labour, migration and hardship. These themes make a useful comparison with later writing about marginalisation, without implying that different authors share the same perspective or method.",
+      "topics": [
+        "Literature & language"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/1962/steinbeck/facts/"
+        }
+      ]
+    },
+    {
+      "id": "1993-literature",
+      "title": "Giving voice to American histories",
+      "summary": "Toni Morrison was recognised for novels combining poetic force and visionary storytelling to illuminate African American experience and an essential part of American life.",
+      "impact": "Her narratives explore how historical violence, memory and identity shape individual lives. The award recognised both the subjects she brought forward and the distinctive forms used to tell them.",
+      "detail": "Works including The Bluest Eye, Song of Solomon and Beloved place difficult histories alongside the complexity and integrity of their characters. Morrison developed narrative techniques that invite readers to understand lives beyond simplified public accounts.",
+      "topics": [
+        "Literature & language"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/1993/morrison/facts/"
+        }
+      ]
+    },
+    {
+      "id": "2016-literature",
+      "title": "Song as a form of poetry",
+      "summary": "Bob Dylan received the literature prize for new poetic expression within the American song tradition. The award brought songwriting into the centre of the Nobel’s literary discussion.",
+      "impact": "The choice invites readers to consider how language works when written for performance and music. Literary expression can be encountered through listening as well as through a printed page.",
+      "detail": "The Swedish Academy’s citation specifically emphasised the song tradition. Dylan’s work draws on American musical forms and developed across a long performing career. This entry connects his prize with other forms of storytelling without claiming those forms are interchangeable.",
+      "topics": [
+        "Literature & language"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/2016/press-release/"
+        },
+        {
+          "title": "Swedish Academy: Bob Dylan biobibliographical notes (2016)",
+          "url": "https://www.nobelprize.org/uploads/2018/06/bio-bibl-11.pdf"
+        }
+      ]
+    },
+    {
+      "id": "1974-economics",
+      "title": "Economies within societies",
+      "summary": "Gunnar Myrdal and Friedrich Hayek were recognised for work on money and economic fluctuations, and for analysing relationships among economic, social and institutional conditions.",
+      "impact": "The shared award highlighted how economic questions extend into the rules, organisations and social structures within which markets operate.",
+      "detail": "The two economists developed markedly different policy perspectives. The committee recognised their scientific contributions together, including interdisciplinary work. Sharing a prize is not a statement that their conclusions or political programmes were identical.",
+      "topics": [
+        "Markets & incentives"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/1974/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "1994-economics",
+      "title": "When everyone responds to everyone else",
+      "summary": "John Nash, John Harsanyi and Reinhard Selten developed tools for analysing strategic interaction, where the outcome of a decision depends on the choices of others.",
+      "impact": "Game theory gave economists a language for bargaining, competition and situations with incomplete information. It made the assumptions behind strategic predictions more explicit.",
+      "detail": "Nash formulated an equilibrium concept for non-cooperative games. Selten refined equilibrium analysis for dynamic settings, while Harsanyi developed ways to handle incomplete information. An equilibrium is a property of a specified model, not a guarantee of a fair or efficient outcome.",
+      "topics": [
+        "Markets & incentives"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/1994/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "2002-economics",
+      "title": "Testing how people and markets behave",
+      "summary": "Daniel Kahneman brought psychological evidence into economics. Vernon Smith established laboratory experiments for studying markets and testing economic predictions.",
+      "impact": "Their separate contributions challenged a purely theoretical approach to decision-making. Researchers could compare assumptions about rational choice and market institutions with observed behaviour.",
+      "detail": "Kahneman’s work with Amos Tversky documented systematic patterns in judgment under uncertainty and developed prospect theory. Smith designed experiments comparing market mechanisms. The prize recognised two research traditions, not a claim that people are always irrational or markets always fail.",
+      "topics": [
+        "Markets & incentives"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "2009-economics",
+      "title": "Cooperation beyond a simple market model",
+      "summary": "Elinor Ostrom studied how communities govern shared resources. Oliver Williamson analysed when economic activities take place within firms rather than through market exchange.",
+      "impact": "Their work expanded economic analysis to rules and institutions that organise cooperation. Common resources are not inevitably doomed, and markets are not the only way to coordinate activity.",
+      "detail": "Ostrom examined arrangements through which users manage resources and enforce shared rules. Williamson studied trade-offs between market bargaining and authority within firms. Both contributions focus on which institutions work under particular conditions, rather than proposing one universal organisational recipe.",
+      "topics": [
+        "Markets & incentives",
+        "Climate & environment"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "2018-economics",
+      "title": "Growth meets climate and ideas",
+      "summary": "William Nordhaus integrated climate change into long-run economic analysis. Paul Romer modelled how economic decisions and incentives shape innovation and long-term growth.",
+      "impact": "The award connected economic activity with two factors often treated as external: the physical environment and the creation of new knowledge.",
+      "detail": "Nordhaus combined climate and economic relationships in integrated assessment models used to examine policy scenarios. Romer explained how investments and incentives influence technological change. These are analytical tools with assumptions, not forecasts that remove uncertainty or settle every policy choice.",
+      "topics": [
+        "Markets & incentives",
+        "Climate & environment"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/2018/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "1995-chemistry",
+      "title": "Understanding a fragile ozone layer",
+      "summary": "Paul Crutzen, Mario Molina and F. Sherwood Rowland explained atmospheric reactions that form and destroy ozone, including how human-made compounds can threaten the protective ozone layer.",
+      "impact": "The research connected emissions at Earth’s surface with chemistry high in the atmosphere. It provided a scientific basis for addressing a global environmental problem.",
+      "detail": "Ozone absorbs harmful ultraviolet radiation. The laureates identified chemical mechanisms that affect its abundance, including catalytic destruction involving trace gases. Ozone depletion and global warming are different problems, even though both show human activity changing the atmosphere.",
+      "topics": [
+        "Climate & environment"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1995/press-release/"
+        }
+      ]
+    },
+    {
+      "id": "2021-physics",
+      "title": "Climate signals and complex systems",
+      "summary": "Syukuro Manabe and Klaus Hasselmann advanced climate modelling and attribution. Giorgio Parisi revealed patterns in disordered systems, contributing to a wider understanding of complex physical behaviour.",
+      "impact": "The award showed how reliable knowledge can emerge from systems with fluctuations and randomness. It combined climate research with a separate contribution to the physics of disorder.",
+      "detail": "Manabe modelled the warming effect of increased carbon dioxide. Hasselmann connected rapidly changing weather to climate and developed methods to identify influencing factors. Parisi’s work on disordered materials supplied insights applicable across many kinds of complex systems.",
+      "topics": [
+        "Climate & environment",
+        "Complex systems"
+      ],
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/2021/press-release/"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "to": "1911-chemistry",
+      "relation": "extended",
+      "label": "From radiation to isolated elements",
+      "description": "Curie’s later chemistry work isolated and characterised elements identified during the earlier radioactivity investigations.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1911/marie-curie/facts/"
+        }
+      ],
+      "from": "1903-physics"
+    },
+    {
+      "to": "1931-chemistry",
+      "relation": "built on",
+      "label": "From reaction to industrial process",
+      "description": "Bosch’s high-pressure engineering made Haber’s ammonia synthesis practical at industrial scale. Bergius’s separate contribution was coal hydrogenation.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1931/bosch/facts/"
+        },
+        {
+          "title": "NobelPrize.org: Friedrich Bergius’s contribution",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1931/bergius/facts/"
+        }
+      ],
+      "from": "1918-chemistry"
+    },
+    {
+      "to": "1921-physics",
+      "relation": "related idea",
+      "label": "Energy in discrete packets",
+      "description": "Both awards concern quantum ideas about energy and light. This is a conceptual connection, not an award for Einstein’s relativity.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1918/planck/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/"
+        }
+      ],
+      "from": "1918-physics"
+    },
+    {
+      "to": "1922-physics",
+      "relation": "built on",
+      "label": "Quantum ideas enter the atom",
+      "description": "Bohr’s atomic model applied quantum restrictions to electron states and explained hydrogen’s discrete spectrum.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1922/bohr/facts/"
+        }
+      ],
+      "from": "1918-physics"
+    },
+    {
+      "to": "1932-physics",
+      "relation": "extended",
+      "label": "Beyond fixed electron orbits",
+      "description": "Heisenberg’s matrix mechanics developed a more general framework after the limitations of Bohr’s atomic model became apparent.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1932/heisenberg/facts/"
+        }
+      ],
+      "from": "1922-physics"
+    },
+    {
+      "to": "1964-physics",
+      "relation": "related idea",
+      "label": "Controlling transitions between energy levels",
+      "description": "The laser principle uses transitions between atomic energy states, a concept that also underlies Bohr’s explanation of spectra.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1964/townes/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1922/bohr/facts/"
+        }
+      ],
+      "from": "1922-physics"
+    },
+    {
+      "to": "1964-physics",
+      "relation": "related idea",
+      "label": "Light and matter exchange quanta",
+      "description": "The photoelectric effect and stimulated emission explore different interactions between photons and matter. They are connected concepts, not the same experiment.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1964/townes/facts/"
+        }
+      ],
+      "from": "1921-physics"
+    },
+    {
+      "to": "2017-physics",
+      "relation": "built on",
+      "label": "Lasers become cosmic measuring tools",
+      "description": "LIGO uses laser interferometers to detect minute distance changes produced by gravitational waves. Laser technology is an enabling tool.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/2017/press-release/"
+        }
+      ],
+      "from": "1964-physics"
+    },
+    {
+      "to": "2014-physics",
+      "relation": "related idea",
+      "label": "Two ways to engineer light",
+      "description": "Lasers and LEDs both control light generation, but coherence and the devices’ operating mechanisms differ. This is a comparison of technologies.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1964/townes/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/2014/press-release/"
+        }
+      ],
+      "from": "1964-physics"
+    },
+    {
+      "to": "2017-physics",
+      "relation": "related idea",
+      "label": "New windows onto the universe",
+      "description": "Radio astronomy and gravitational-wave astronomy reveal different signals from extreme cosmic systems. No direct research lineage is implied.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1974/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/2017/press-release/"
+        }
+      ],
+      "from": "1974-physics"
+    },
+    {
+      "to": "1962-medicine",
+      "relation": "built on",
+      "label": "X-rays reveal molecular structure",
+      "description": "DNA structure research used X-ray diffraction evidence. This connects the discovery of a radiation to a later structural application.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/1901/rontgen/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1962/speedread/"
+        }
+      ],
+      "from": "1901-physics"
+    },
+    {
+      "to": "1968-medicine",
+      "relation": "extended",
+      "label": "From molecular structure to genetic code",
+      "description": "After DNA’s structure, researchers investigated how nucleotide sequences specify the amino acids in proteins.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: How the Code Was Cracked",
+          "url": "https://educationalgames.nobelprize.org/educational/medicine/gene-code/history.html"
+        }
+      ],
+      "from": "1962-medicine"
+    },
+    {
+      "to": "1978-medicine",
+      "relation": "related idea",
+      "label": "Making genetic material experimentally tractable",
+      "description": "Restriction enzymes gave researchers ways to cut DNA into defined fragments and study gene organisation.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1978/press-release/"
+        }
+      ],
+      "from": "1962-medicine"
+    },
+    {
+      "to": "1980-chemistry",
+      "relation": "built on",
+      "label": "Cutting enables recombination",
+      "description": "Restriction enzymes supplied tools to dissect DNA and create new combinations; recombinant-DNA work developed the experimental possibilities.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1978/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1980/press-release/"
+        }
+      ],
+      "from": "1978-medicine"
+    },
+    {
+      "to": "1993-chemistry",
+      "relation": "related idea",
+      "label": "Reading, copying and modifying DNA",
+      "description": "Sequencing and recombination were joined by PCR and targeted mutation, expanding the molecular biologist’s toolkit.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1980/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1993/press-release/"
+        }
+      ],
+      "from": "1980-chemistry"
+    },
+    {
+      "to": "2020-chemistry",
+      "relation": "related idea",
+      "label": "Bacterial defences become laboratory tools",
+      "description": "Restriction enzymes and CRISPR-Cas9 both originated in bacterial defences against foreign genetic material. Their targeting mechanisms are different.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1978/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2020/press-release/"
+        }
+      ],
+      "from": "1978-medicine"
+    },
+    {
+      "to": "2020-chemistry",
+      "relation": "related idea",
+      "label": "Two approaches to targeted genetic change",
+      "description": "Site-directed mutagenesis and CRISPR-based editing enable deliberate genetic changes through different methods. This is a thematic connection.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1993/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2020/press-release/"
+        }
+      ],
+      "from": "1993-chemistry"
+    },
+    {
+      "to": "2023-medicine",
+      "relation": "related idea",
+      "label": "RNA instructions become a vaccine platform",
+      "description": "The genetic-code story explains how RNA directs protein production; modified mRNA vaccines put that cellular process to use.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: Robert Holley and transfer RNA",
+          "url": "https://www.nobelprize.org/prizes/medicine/1968/holley/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/2023/press-release/"
+        }
+      ],
+      "from": "1968-medicine"
+    },
+    {
+      "to": "1945-medicine",
+      "relation": "related idea",
+      "label": "Identifying bacteria and treating infection",
+      "description": "Koch’s tuberculosis work and penicillin illustrate different stages of infection research: identifying causes and developing antibacterial treatment. Penicillin was not the cure for tuberculosis.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1905/koch/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1945/florey/facts/"
+        }
+      ],
+      "from": "1905-medicine"
+    },
+    {
+      "to": "2005-medicine",
+      "relation": "related idea",
+      "label": "An infectious cause changes treatment",
+      "description": "The H. pylori discovery made antibiotics central to treating infection-associated ulcers. This is a connection to antibacterial therapy, not a claim that penicillin alone is the standard treatment.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/2005/press-release/"
+        }
+      ],
+      "from": "1945-medicine"
+    },
+    {
+      "to": "2005-medicine",
+      "relation": "related idea",
+      "label": "Infection hypotheses require strong evidence",
+      "description": "Fibiger’s failed cancer model and H. pylori’s established disease role invite comparison of evidence. The later discovery does not vindicate Fibiger’s particular claim.",
+      "sources": [
+        {
+          "title": "Lichtman (2017): A Bacterial Cause of Cancer, historical analysis",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5423514/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/2005/press-release/"
+        }
+      ],
+      "from": "1926-medicine"
+    },
+    {
+      "to": "2015-medicine",
+      "relation": "related idea",
+      "label": "Medicines found through natural sources",
+      "description": "Penicillin and the 2015 antiparasitic discoveries show different routes from microbes or plants to experimentally validated medicines.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1945/florey/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/2015/press-release/"
+        }
+      ],
+      "from": "1945-medicine"
+    },
+    {
+      "to": "2015-medicine",
+      "relation": "related idea",
+      "label": "Different interventions against malaria",
+      "description": "DDT targets insect vectors; artemisinin targets malaria parasites in infected people. The related public-health goal does not make the interventions equivalent.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/1948/muller/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/medicine/2015/press-release/"
+        }
+      ],
+      "from": "1948-medicine"
+    },
+    {
+      "to": "1995-chemistry",
+      "relation": "related idea",
+      "label": "Useful chemicals, far-reaching environmental effects",
+      "description": "DDT’s ecological costs and ozone-depleting compounds show why chemical applications need assessment beyond their immediate use. These are distinct mechanisms.",
+      "sources": [
+        {
+          "title": "US EPA: DDT history, environmental effects and restrictions",
+          "url": "https://www.epa.gov/ingredients-used-pesticide-products/ddt-brief-history-and-status"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1995/press-release/"
+        }
+      ],
+      "from": "1948-medicine"
+    },
+    {
+      "to": "2021-physics",
+      "relation": "related idea",
+      "label": "Human activity changes the atmosphere",
+      "description": "Atmospheric chemistry and climate physics investigate different environmental mechanisms. Ozone depletion should not be treated as the cause of global warming.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1995/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/2021/press-release/"
+        }
+      ],
+      "from": "1995-chemistry"
+    },
+    {
+      "to": "2021-physics",
+      "relation": "related idea",
+      "label": "Linking physical climate and policy analysis",
+      "description": "Climate physics and integrated economic assessment address connected questions with different methods. Prize years do not establish the chronology of the underlying discoveries.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/2018/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/physics/2021/press-release/"
+        }
+      ],
+      "from": "2018-economics"
+    },
+    {
+      "to": "2009-economics",
+      "relation": "related idea",
+      "label": "Institutions shape economic life",
+      "description": "Both awards examine how economic outcomes depend on social rules and organisations. This is thematic continuity, not agreement between all four laureates.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/1974/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/press-release/"
+        }
+      ],
+      "from": "1974-economics"
+    },
+    {
+      "to": "2002-economics",
+      "relation": "related idea",
+      "label": "Predicted strategies meet observed decisions",
+      "description": "Game theory models strategic choice; psychological and laboratory research tests how people and institutions actually behave. One field does not simply disprove the other.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/1994/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/press-release/"
+        }
+      ],
+      "from": "1994-economics"
+    },
+    {
+      "to": "2018-economics",
+      "relation": "related idea",
+      "label": "Resources, institutions and long-term choices",
+      "description": "Commons governance and climate economics both address coordination around resources, at different scales and with different analytical approaches.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/press-release/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/economic-sciences/2018/press-release/"
+        }
+      ],
+      "from": "2009-economics"
+    },
+    {
+      "to": "1973-peace",
+      "relation": "related idea",
+      "label": "Negotiation as a route towards peace",
+      "description": "Passy’s promotion of arbitration and the Vietnam negotiations share a diplomatic theme. The connection makes no claim that their outcomes or ethical contexts were equivalent.",
+      "sources": [
+        {
+          "title": "Norwegian Nobel Committee: 1901 laureates",
+          "url": "https://www.nobelpeaceprize.org/laureates/1901"
+        },
+        {
+          "title": "Norwegian Nobel Committee: the 1973 prize",
+          "url": "https://www.nobelpeaceprize.org/laureates/1973"
+        }
+      ],
+      "from": "1901-peace"
+    },
+    {
+      "to": "1993-peace",
+      "relation": "related idea",
+      "label": "Peace linked to racial equality",
+      "description": "King’s civil-rights struggle and the South African transition connect peace with racial equality, while involving distinct histories, movements and strategies.",
+      "sources": [
+        {
+          "title": "Norwegian Nobel Committee: Martin Luther King Jr.",
+          "url": "https://www.nobelpeaceprize.org/laureates/1964"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/peace/1993/press-release/"
+        }
+      ],
+      "from": "1964-peace"
+    },
+    {
+      "to": "2009-peace",
+      "relation": "related idea",
+      "label": "Rewarding a direction before results are settled",
+      "description": "Both awards prompt questions about the timing of recognition. Their specific controversies differ and neither case supplies a general verdict on the Peace Prize.",
+      "sources": [
+        {
+          "title": "Norwegian Nobel Committee: the 1973 prize",
+          "url": "https://www.nobelpeaceprize.org/laureates/1973"
+        },
+        {
+          "title": "Barack Obama’s 2009 Nobel lecture",
+          "url": "https://www.nobelprize.org/prizes/peace/2009/obama/lecture/"
+        }
+      ],
+      "from": "1973-peace"
+    },
+    {
+      "to": "1962-literature",
+      "relation": "related idea",
+      "label": "American lives through contrasting prose",
+      "description": "Hemingway and Steinbeck offer different narrative approaches to hardship and experience. This comparison does not assert a direct influence between them.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/1954/hemingway/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/1962/steinbeck/facts/"
+        }
+      ],
+      "from": "1954-literature"
+    },
+    {
+      "to": "1993-literature",
+      "relation": "related idea",
+      "label": "Whose experiences become visible?",
+      "description": "Steinbeck’s and Morrison’s novels bring marginalised experiences into view in distinct historical settings and literary forms. This is an interpretive comparison.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/1962/steinbeck/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/1993/morrison/facts/"
+        }
+      ],
+      "from": "1962-literature"
+    },
+    {
+      "to": "2016-literature",
+      "relation": "related idea",
+      "label": "Language across narrative and song",
+      "description": "Morrison’s novels and Dylan’s songs invite comparison of poetic language in different forms. This is a curatorial theme, not a claimed research or influence relationship.",
+      "sources": [
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/1993/morrison/facts/"
+        },
+        {
+          "title": "NobelPrize.org: award background",
+          "url": "https://www.nobelprize.org/prizes/literature/2016/press-release/"
+        }
+      ],
+      "from": "1993-literature"
+    }
+  ],
+  "trails": [
+    {
+      "id": "reading-life",
+      "title": "Learning to read and edit life",
+      "description": "Follow DNA from structure and code to the tools used to cut, read, copy and edit it.",
+      "prizeIds": [
+        "1962-medicine",
+        "1968-medicine",
+        "1978-medicine",
+        "1980-chemistry",
+        "1993-chemistry",
+        "2020-chemistry"
+      ]
+    },
+    {
+      "id": "quantum-light",
+      "title": "From quanta to a new view of the universe",
+      "description": "Trace energy levels into controllable light and the instruments that detect spacetime disturbances.",
+      "prizeIds": [
+        "1918-physics",
+        "1921-physics",
+        "1922-physics",
+        "1932-physics",
+        "1964-physics",
+        "2017-physics"
+      ]
+    },
+    {
+      "id": "fighting-infection",
+      "title": "Finding causes, making treatments",
+      "description": "Compare how infection is investigated, treated and prevented, including a famous failed cancer claim.",
+      "prizeIds": [
+        "1905-medicine",
+        "1926-medicine",
+        "1945-medicine",
+        "1948-medicine",
+        "2005-medicine",
+        "2015-medicine",
+        "2023-medicine"
+      ]
+    },
+    {
+      "id": "planet",
+      "title": "Our changing atmosphere",
+      "description": "Explore chemical consequences, ozone, climate physics and economic choices. The connections are thematic, not a single research lineage.",
+      "prizeIds": [
+        "1918-chemistry",
+        "1931-chemistry",
+        "1948-medicine",
+        "1995-chemistry",
+        "2018-economics",
+        "2021-physics"
+      ]
+    },
+    {
+      "id": "human-choices",
+      "title": "How people organise and choose",
+      "description": "Move from institutions and strategic models to observed behaviour, shared resources and long-term decisions.",
+      "prizeIds": [
+        "1974-economics",
+        "1994-economics",
+        "2002-economics",
+        "2009-economics",
+        "2018-economics"
+      ]
+    },
+    {
+      "id": "peace-in-progress",
+      "title": "Peace is a process",
+      "description": "Examine humanitarian institutions, civil rights, negotiations and the difficult timing of recognition.",
+      "prizeIds": [
+        "1901-peace",
+        "1964-peace",
+        "1973-peace",
+        "1993-peace",
+        "2009-peace"
+      ]
+    }
+  ]
+}
