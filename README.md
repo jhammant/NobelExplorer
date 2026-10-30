@@ -6,6 +6,8 @@ evidence or historical debate changed.
 
 **[Explore the atlas](https://jhammant.github.io/NobelExplorer/)**
 
+![Nobel Explorer: searchable timeline of prizes across six categories](docs/images/explorer.png)
+
 ## Explore
 
 - Every awarded prize from 1901 through the latest bundled year, including the

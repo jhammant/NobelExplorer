@@ -192,7 +192,8 @@ test('connection graph and evidence list agree and filters require both endpoint
   await expect(page.locator('.graph-edge')).toHaveCount(editorial.connections.length);
   await page.locator('.connection-entry details summary').first().click();
   await expect(page.locator('.connection-entry details').first().locator('a').first()).toBeVisible();
-  await page.locator('.graph-node circle').first().click();
+  // The whole labelled node is an interactive target, including its unpainted gaps.
+  await page.locator('.graph-node').first().click();
   await expect(page.locator('#prize-dialog')).toBeVisible();
   await page.getByRole('button', { name: 'Close prize details' }).click();
   await page.getByRole('searchbox').fill('Marie Curie');
