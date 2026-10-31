@@ -27,6 +27,7 @@ async function openHome(page) {
 }
 
 async function openFilters(page) {
+  await expect(page.locator('#load-state')).toBeHidden();
   if (!(await page.locator('#filters-panel').isVisible())) await page.locator('#toggle-filters').click();
   await expect(page.locator('#filters-panel')).toBeVisible();
 }
