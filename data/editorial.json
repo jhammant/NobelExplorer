@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "entries": [
     {
       "id": "1901-physics",
@@ -861,6 +861,37 @@
           "url": "https://www.nobelprize.org/prizes/physics/2021/press-release/"
         }
       ]
+    },
+    {
+      "id": "1996-peace",
+      "title": "Advocacy for East Timor",
+      "summary": "Carlos Belo and José Ramos-Horta were recognised for work toward a peaceful resolution in East Timor, combining public advocacy during Indonesian occupation with international diplomacy for self-determination.",
+      "impact": "Their different roles kept the conflict and human rights abuses before international audiences. The prize recognised efforts toward a peaceful solution while East Timor’s future remained unresolved in 1996.",
+      "detail": "Belo called for nonviolent resistance and a United Nations plebiscite, and helped witnesses report abuses. Ramos-Horta represented the East Timorese cause internationally and proposed a 1992 peace plan involving humanitarian cooperation and an expanding international presence. The award honoured both approaches to seeking self-determination.",
+      "topics": [
+        "Peace & human rights"
+      ],
+      "sources": [
+        {
+          "title": "Carlos Filipe Ximenes Belo: Nobel facts",
+          "url": "https://www.nobelprize.org/prizes/peace/1996/belo/facts/"
+        },
+        {
+          "title": "José Ramos-Horta: Nobel facts",
+          "url": "https://www.nobelprize.org/prizes/peace/1996/ramos-horta/facts/"
+        }
+      ],
+      "reassessment": {
+        "kind": "ethical",
+        "title": "Later abuse allegations and Vatican restrictions concerning Belo",
+        "text": "On 29 September 2022, Vatican spokesman Matteo Bruni confirmed that allegations concerning Belo had reached the doctrinal congregation in 2019. It imposed disciplinary restrictions in September 2020 and strengthened them in November 2021, limiting his movements and ministry and prohibiting voluntary contact with minors. Vatican News identified the accusations as sexual abuse of minors. The statement documents allegations and church disciplinary action; it does not report a criminal conviction. This ethical concern applies to Belo alone, not co-laureate José Ramos-Horta, and does not erase the historical peace work recognised in 1996.",
+        "sources": [
+          {
+            "title": "Vatican News, 29 September 2022: Holy See Press Office statement on Belo",
+            "url": "https://www.vaticannews.va/en/vatican-city/news/2022-09/nobel-prize-laureate-bishop-ximenes-belo-accused-of-abuse.html"
+          }
+        ]
+      }
     }
   ],
   "connections": [

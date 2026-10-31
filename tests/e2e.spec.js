@@ -5,6 +5,8 @@ const raw = JSON.parse(await readFile(new URL('../data/nobel-prizes.json', impor
 const editorial = JSON.parse(await readFile(new URL('../data/editorial.json', import.meta.url), 'utf8'));
 const total = raw.nobelPrizes.filter((prize) => prize.laureates?.length).length;
 
+const readExplanations = async () => JSON.parse(await readFile(new URL('../data/explanations.json', import.meta.url), 'utf8'));
+
 async function openAtlas(page, query = '') {
   await page.goto(`./${query}`);
   await expect(page.locator('#load-state')).toBeHidden();
@@ -78,8 +80,8 @@ test('category, year, topic, country and institution filters intersect', async (
   await expect(page.locator('.prize-row[data-prize="1911-chemistry"]')).toBeVisible();
   await page.locator('.prize-row').click();
   await expect(page.getByRole('dialog')).toBeVisible();
-  const institution = await page.locator('#prize-content .recipient-meta').first().textContent();
-  expect(institution).toContain('Poland');
+  const recipientFacts = await page.locator('#prize-content .recipient-facts').first().textContent();
+  expect(recipientFacts).toContain('Poland');
   await page.getByRole('button', { name: 'Close prize details' }).click();
   await page.getByLabel('Institution at award').selectOption('Sorbonne University');
   await expect(page.locator('.prize-row')).toHaveCount(1);
@@ -154,8 +156,12 @@ test('prize details show complete recipient citations, context and source links'
   await expect(dialog.locator('.reassessment-box')).toBeVisible();
   await expect(dialog.locator('.reassessment-box')).toContainText('Franklin');
   await expect(dialog.locator('.reassessment-box')).toContainText('1958');
+  const deeperContext = dialog.locator('details').filter({ has: page.getByText('Go a little deeper', { exact: true }) });
+  await expect(deeperContext).toHaveAttribute('open', '');
   await dialog.getByText('Go a little deeper', { exact: true }).click();
-  await expect(dialog.locator('.detail-disclosure').first()).toHaveAttribute('open', '');
+  await expect(deeperContext).not.toHaveAttribute('open', '');
+  await dialog.getByText('Go a little deeper', { exact: true }).click();
+  await expect(deeperContext).toHaveAttribute('open', '');
   const sourceHrefs = await dialog.locator('.source-list a').evaluateAll((links) => links.map((link) => link.href));
   expect(sourceHrefs.length).toBeGreaterThan(2);
   expect(sourceHrefs.every((href) => href.startsWith('https://'))).toBe(true);
@@ -330,4 +336,126 @@ test('layout stays inside the viewport for the timeline, graph and prize detail'
   expect(dialog.x).toBeGreaterThanOrEqual(0);
   expect(dialog.x + dialog.width).toBeLessThanOrEqual(page.viewportSize().width + 1);
   await page.screenshot({ path: testInfo.outputPath('atlas-detail.png'), fullPage: false });
+});
+
+for (const [categoryName, id] of [
+  ['Physics', '1902-physics'], ['Chemistry', '1901-chemistry'], ['Medicine', '1901-medicine'],
+  ['Literature', '1901-literature'], ['Peace', '1902-peace'], ['Economics', '1969-economics'],
+]) {
+  test(`previously sparse ${categoryName} prize now has a full readable explanation`, async ({ page }) => {
+    const data = await readExplanations();
+    const entry = data.entries.find((item) => item.id === id);
+    expect(entry).toBeDefined();
+    expect(editorial.entries.some((item) => item.id === id)).toBe(false);
+    await openAtlas(page, `?prize=${id}`);
+
+    const dialog = page.locator('#prize-dialog');
+    await expect(dialog.locator('.prize-explanation')).toBeVisible();
+    await expect(dialog.locator('.editorial-gap')).toHaveCount(0);
+    for (const field of ['overview', 'background', 'work', 'significance']) {
+      const section = dialog.locator(`[data-explanation-field="${field}"]`);
+      await expect(section).toHaveCount(1);
+      await section.scrollIntoViewIfNeeded();
+      await expect(section).toBeVisible();
+      // Check complete rendering without freezing generated editorial wording.
+      await expect(section).toHaveText(entry[field]);
+    }
+    const sources = dialog.locator('.explanation-sources a');
+    expect(await sources.count()).toBeGreaterThanOrEqual(entry.sources.length);
+    expect(await sources.evaluateAll((links) => links.every((link) => link.href.startsWith('https://')))).toBe(true);
+    const furtherReading = dialog.locator('.further-reading a');
+    expect(entry.furtherReading?.length).toBeGreaterThanOrEqual(2);
+    await expect(furtherReading).toHaveCount(entry.furtherReading.length);
+    for (const source of entry.furtherReading) {
+      const link = furtherReading.filter({ hasText: source.title });
+      await expect(link).toHaveAttribute('href', source.url);
+      await expect(link).toHaveAttribute('target', '_blank');
+      await expect(link).toHaveAttribute('rel', /noopener/);
+    }
+    expect(await documentFits(page)).toBe(true);
+    await page.getByRole('button', { name: 'Close prize details' }).click();
+    await expect(dialog).toBeHidden();
+  });
+}
+
+test('long shared-prize reading preserves all recipients and scrolls back to a working close control', async ({ page }, testInfo) => {
+  const id = '2025-physics';
+  const official = raw.nobelPrizes.find((prize) => prize.awardYear === '2025' && prize.category.en === 'Physics');
+  await openAtlas(page, '?from=2025&to=2025&categories=physics&view=catalogue');
+  const opener = page.locator(`.prize-row[data-prize="${id}"]`);
+  await opener.click();
+  const dialog = page.locator('#prize-dialog');
+
+  await expect(dialog.locator('.recipient')).toHaveCount(official.laureates.length);
+  for (const recipient of official.laureates) await expect(dialog).toContainText((recipient.knownName || recipient.orgName).en);
+  await expect(dialog.locator('.recipient blockquote')).toHaveCount(official.laureates.length);
+  await expect(dialog.locator('.prize-explanation')).toBeVisible();
+  for (const [button, target] of [['The story', '#prize-story'], ['Laureates & citation', '#prize-laureates'], ['Sources & reading', '#prize-reading']]) {
+    await dialog.getByRole('navigation', { name: 'On this prize page' }).getByRole('button', { name: button, exact: true }).click();
+    await expect(dialog.locator(target)).toBeFocused();
+  }
+  await dialog.locator('[data-explanation-field="significance"]').scrollIntoViewIfNeeded();
+  const lastSource = dialog.locator('.explanation-sources a').last();
+  await lastSource.scrollIntoViewIfNeeded();
+  await lastSource.focus();
+  expect(await dialog.evaluate((element) => element.scrollTop)).toBeGreaterThan(100);
+  expect(await dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true);
+  await expect(page.getByRole('button', { name: 'Close prize details' })).toBeInViewport();
+  expect(await documentFits(page)).toBe(true);
+  await page.screenshot({ path: testInfo.outputPath('expanded-shared-prize.png'), fullPage: false });
+  await page.keyboard.press('Escape');
+  await expect(dialog).toBeHidden();
+  await expect(opener).toBeFocused();
+  expect(new URL(page.url()).searchParams.has('prize')).toBe(false);
+  expect(await page.locator('body').evaluate((body) => body.style.overflow)).not.toBe('hidden');
+  await opener.click();
+  await dialog.locator('.explanation-sources a').last().scrollIntoViewIfNeeded();
+  await page.getByRole('button', { name: 'Close prize details' }).click();
+  await expect(dialog).toBeHidden();
+  await expect(opener).toBeFocused();
+});
+
+test('expanded recipient details show life dates and navigate genuine repeat awards', async ({ page }) => {
+  await openAtlas(page, '?prize=1903-physics');
+  const dialog = page.locator('#prize-dialog');
+  const marie = dialog.locator('.recipient').filter({ hasText: 'Marie Curie' });
+
+  await expect(marie).toHaveCount(1);
+  await expect(marie).toContainText('1867');
+  await expect(marie).toContainText('1934');
+  const repeatLink = marie.locator('[data-prize="1911-chemistry"]');
+  await expect(repeatLink).toHaveCount(1);
+  await repeatLink.click();
+  expect(new URL(page.url()).searchParams.get('prize')).toBe('1911-chemistry');
+  expect(await dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true);
+  await expect(dialog.locator('.recipient')).toHaveCount(1);
+  await expect(dialog.locator('.prize-explanation')).toBeVisible();
+  await page.goto('./?prize=1917-peace');
+  await expect(page.locator('#prize-dialog')).toBeVisible();
+  await expect(page.locator('#prize-dialog .recipient')).toContainText('1863');
+});
+
+test('complete explanations remain distinct from the curated-context and reassessment filters', async ({ page }) => {
+  await openAtlas(page);
+
+  await page.getByLabel('Look closer').selectOption('context');
+  await expect(page.locator('#result-count')).toContainText(`${editorial.entries.length} of ${total} prizes`);
+  await page.getByLabel('Look closer').selectOption('reassessed');
+  await expect(page.locator('#result-count')).toContainText(`${editorial.entries.filter((entry) => entry.reassessment).length} of ${total} prizes`);
+  await page.getByLabel('Look closer').selectOption('all');
+  await expect(page.locator('#result-count')).toContainText(`${total} of ${total} prizes`);
+});
+
+test('a phrase from the new background is discoverable through the live search control', async ({ page }) => {
+  const data = await readExplanations();
+  const entry = data.entries.find((item) => item.id === '1902-physics');
+  const words = entry.background.match(/[\p{L}\p{N}-]+/gu).filter((word) => word.length >= 5).slice(0, 3);
+  expect(words.length).toBe(3);
+  await openAtlas(page, '?view=catalogue');
+
+  await page.getByRole('searchbox').fill(words.join(' '));
+
+  await expect(page.locator(`.prize-row[data-prize="${entry.id}"]`)).toBeVisible();
+  await page.locator(`.prize-row[data-prize="${entry.id}"]`).click();
+  await expect(page.locator('#prize-dialog [data-explanation-field="background"]')).toBeVisible();
 });

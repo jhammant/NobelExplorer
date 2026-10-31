@@ -155,9 +155,10 @@ test('timeline contains all matching awards and one keyboard entry point', () =>
   assert.equal((html.match(/data-category="[^"]+" tabindex="0"/g) || []).length, 1);
 });
 
-test('unannotated entries state their actual coverage instead of inventing explanations', () => {
+test('catalogues without an explanation layer preserve official citations without inventing a story', () => {
   const prize = prizes.find((p) => !p.summary);
   const html = detail(prize, lookup, [], null);
-  assert.ok(html.includes('has not yet been added'));
+  assert.equal(prize.explanation, undefined);
+  assert.ok(!html.includes('class="prize-explanation"'));
   assert.ok(html.includes(escape(prize.recipients[0].motivation)));
 });

@@ -11,7 +11,30 @@ correct a fact, explain a prize, or connect two ideas with evidence.
 4. Use a Conventional Commit message. Put issue-closing references in the PR
    description rather than the commit message.
 
-## Adding an explanation
+## Improving a prize explanation
+
+Every awarded prize has an entry in `data/explanations.json`. Keep `overview`,
+`background`, `work` and `significance` specific and complementary: explain the
+idea, its setting, what was done and why it mattered. Aim for about 160–200 words
+across these fields, using original phrasing and sources that support the exact
+claims. Longer explanations need enough source material to justify their depth.
+Do not pad a thin source with guesses or generic praise.
+
+For shared awards, distinguish each laureate's contribution and do not assume
+they collaborated. Describe literature in terms of the writing, and Peace
+awards in their historical context. An award is not proof that peace lasted or
+that a medical treatment is appropriate today. Preserve later corrections when
+an official historical account is incomplete or misleading.
+
+Each entry also has `id`, `title` and `sources` (a nonempty array of `title` and
+HTTPS `url`). Optional `furtherReading` links can include a `recipientId`, which
+must belong to that award. Link only to material you have verified exists.
+Keep source downloads, prompts and intermediate drafts out of Git.
+
+The build requires an explanation for every awarded prize in the snapshot.
+When a new year is added, research the missing explanations before publishing.
+
+## Adding extended historical context
 
 Edit `data/editorial.json`. Prize IDs use `YEAR-CATEGORY`, for example
 `1962-medicine` or `2009-economics`. Categories are `physics`, `chemistry`,

@@ -34,7 +34,7 @@ function populateFilters() {
   for (const id of ['year-from', 'year-to']) { $(`#${id}`).min = bounds.min; $(`#${id}`).max = bounds.max; }
   $('#coverage-years').textContent = `${bounds.min}–${bounds.max}`;
   $('#trail-list').innerHTML = catalog.trails.map((trail) => `<button class="trail-button" data-trail="${escape(trail.id)}"><span class="trail-dot" aria-hidden="true"></span>${escape(trail.title)}<span aria-hidden="true">↗</span></button>`).join('');
-  $('#coverage-note').innerHTML = `Official records for all ${catalog.meta.prizeCount} awards. Added context for ${catalog.meta.contextCount}; ${catalog.meta.connectionCount} sourced connections. <button data-action="about">How the atlas is made</button>`;
+  $('#coverage-note').innerHTML = `${catalog.meta.explanationCount === catalog.meta.prizeCount ? `Official records and explanations for all ${catalog.meta.prizeCount} awards.` : `Official records for all ${catalog.meta.prizeCount} awards.`} ${catalog.meta.contextCount} extended historical notes; ${catalog.meta.connectionCount} sourced connections. <button data-action="about">How the atlas is made</button>`;
   $('#about-content').innerHTML = about(catalog.meta);
 }
 
@@ -55,7 +55,7 @@ function activeFilters() {
     ...state.categories.map((id) => ({ key: `category:${id}`, label: category(id).name })),
     ...['q', 'topic', 'country', 'institution'].filter((key) => state[key]).map((key) => ({ key, label: key === 'q' ? `Search: ${state[key]}` : state[key] })),
     ...(state.from !== bounds.min || state.to !== bounds.max ? [{ key: 'years', label: `${state.from}–${state.to}` }] : []),
-    ...(state.lens !== 'all' ? [{ key: 'lens', label: REASSESSMENTS[state.lens] || (state.lens === 'context' ? 'With context' : 'All reassessments') }] : []),
+    ...(state.lens !== 'all' ? [{ key: 'lens', label: REASSESSMENTS[state.lens] || (state.lens === 'context' ? 'Extended historical context' : 'All reassessments') }] : []),
   ];
   $('#active-filters').innerHTML = labels.map(({ key, label }) => `<button class="filter-chip" data-remove="${escape(key)}" aria-label="Remove filter ${escape(label)}">${escape(label)} <span aria-hidden="true">×</span></button>`).join('');
 }
@@ -166,6 +166,11 @@ function bindEvents() {
   document.addEventListener('click', async (event) => {
     const button = event.target.closest('button, a[data-prize]');
     if (!button || !catalog) return;
+    if (button.dataset.jump) {
+      const section = document.getElementById(button.dataset.jump);
+      if (section) { section.scrollIntoView({ block: 'start' }); section.focus({ preventScroll: true }); }
+      return;
+    }
     if (button.dataset.prize) { event.preventDefault(); openPrize(button.dataset.prize); return; }
     if (button.dataset.view) { update({ view: button.dataset.view }); return; }
     if (button.dataset.trail) { startTrail(button.dataset.trail); return; }

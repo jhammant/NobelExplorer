@@ -53,8 +53,10 @@ export function searchText(prize) {
   return normalise([
     prize.year, prize.category, prize.fullCategory, prize.title, prize.summary,
     prize.impact, prize.detail, ...prize.topics,
+    prize.explanation?.title, prize.explanation?.overview, prize.explanation?.background,
+    prize.explanation?.work, prize.explanation?.significance,
     prize.reassessment?.title, prize.reassessment?.text,
-    ...prize.recipients.flatMap((person) => [person.name, person.motivation, person.country, ...person.affiliations]),
+    ...prize.recipients.flatMap((person) => [person.name, person.fullName, person.motivation, person.country, ...person.affiliations]),
   ].filter(Boolean).join(' '));
 }
 
@@ -67,7 +69,7 @@ export function filterPrizes(prizes, filters = {}) {
     if (filters.topic && !prize.topics.includes(filters.topic)) return false;
     if (filters.country && !prize.recipients.some((p) => p.country === filters.country)) return false;
     if (filters.institution && !prize.recipients.some((p) => p.affiliations.includes(filters.institution))) return false;
-    if (filters.lens === 'context' && !prize.summary) return false;
+    if (filters.lens === 'context' && !prize.detail) return false;
     if (filters.lens === 'reassessed' && !prize.reassessment) return false;
     if (REASSESSMENTS[filters.lens] && prize.reassessment?.kind !== filters.lens) return false;
     if (terms.length && !terms.every((term) => (prize.search || searchText(prize)).includes(term))) return false;

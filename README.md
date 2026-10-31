@@ -12,20 +12,28 @@ evidence or historical debate changed.
 
 - Every awarded prize from 1901 through the latest bundled year, including the
   Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel.
-- Search people, official award citations, topics and historical context.
+- Search people, official award citations, explanations, topics and historical context.
 - Filter by category, year, topic, birthplace and institution at the award.
 - Group by decade, year, topic, category, country or institution.
 - Switch between the timeline, catalogue and a map of sourced connections.
 - Follow six discovery trails, from reading DNA to debates about peace.
-- Open a prize for its official motivation, recipients, context and sources.
+- Read every prize's historical setting, the work itself and why it mattered.
+- See each recipient's original citation, prize share, life dates, places and
+  affiliations, with direct links to their other Nobel awards.
+- Go deeper with official biographies, Nobel lectures and award background.
 - Share any view or selected prize with its URL. No account or API key needed.
 
 The current snapshot contains **639 awarded prizes and 1,028 unique laureates**,
-covering **1901–2026**. The editorial collection adds **43 explanations,
-35 connections and 8 reassessments**. Every award has its official citation;
-additional plain-English explanations are a growing collection, with uncovered
-entries explicitly labelled. There is no claim that all controversies or all
-scientific connections have been identified.
+covering **1901–2026**. All **639 prizes have sourced plain-English
+explanations**, alongside their unchanged official citations. A further
+**44 extended historical notes, 35 connections and 9 reassessments** offer
+additional context. The explanations were drafted with AI assistance from
+official Nobel background material and other authoritative sources; they are
+not independently peer reviewed.
+There is no claim that all controversies or scientific connections have been
+identified.
+
+![Expanded prize page with the historical setting, contribution and significance](docs/images/prize-detail.png)
 
 ## Run locally
 
@@ -65,7 +73,8 @@ mobile overflow and recovery from a failed data request.
 
 ```text
 data/nobel-prizes.json + data/laureates.json     Official snapshots
-data/editorial.json                            Sourced editorial context
+data/explanations.json                         Background for every prize
+data/editorial.json                            Extended context and connections
                    ↓
 scripts/catalog.mjs                            Join and validate
 scripts/build.mjs                              Package static files
@@ -108,6 +117,9 @@ The refresh script follows pagination, checks record counts and refuses a
 shrinking dataset. It fetches both datasets before replacing the snapshot.
 Review the diff before publishing. The editorial collection is maintained
 separately: refreshing official records never generates or changes commentary.
+If the snapshot introduces a new award, add its sourced explanation before
+building: incomplete explanation coverage fails the build rather than
+publishing a new prize with an empty story.
 Review the snapshot-count assertions in `tests/model.test.mjs` when a new year
 is added. Scheduled refreshes are not enabled.
 
