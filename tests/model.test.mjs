@@ -101,7 +101,7 @@ test('URL state preserves all filters, selected award and trail', () => {
 
 test('malformed URL filters and reversed ranges fall back to valid values', () => {
   const state = readState('?view=bad&group=bad&sort=bad&lens=bad&categories=fake,physics&from=9999&to=1', bounds);
-  assert.equal(state.view, 'timeline'); assert.equal(state.group, 'decade'); assert.equal(state.sort, 'newest'); assert.equal(state.lens, 'all');
+  assert.equal(state.view, 'catalogue'); assert.equal(state.group, 'decade'); assert.equal(state.sort, 'newest'); assert.equal(state.lens, 'all');
   assert.deepEqual(state.categories, ['physics']); assert.equal(state.from, bounds.max); assert.equal(state.to, bounds.max);
 });
 
@@ -159,6 +159,6 @@ test('catalogues without an explanation layer preserve official citations withou
   const prize = prizes.find((p) => !p.summary);
   const html = detail(prize, lookup, [], null);
   assert.equal(prize.explanation, undefined);
-  assert.ok(!html.includes('class="prize-explanation"'));
+  assert.ok(!/class="[^"]*\bprize-explanation\b/.test(html));
   assert.ok(html.includes(escape(prize.recipients[0].motivation)));
 });

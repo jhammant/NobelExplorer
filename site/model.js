@@ -110,26 +110,37 @@ export function readState(search, bounds) {
   const from = Math.max(bounds.min, Math.min(bounds.max, Number(params.get('from')) || bounds.min));
   const to = Math.max(from, Math.min(bounds.max, Number(params.get('to')) || bounds.max));
   const valid = (name, values, fallback) => values.includes(params.get(name)) ? params.get(name) : fallback;
+  const view = valid('view', ['timeline', 'catalogue', 'connections'], 'catalogue');
+  const lens = valid('lens', ['all', 'context', 'reassessed', ...Object.keys(REASSESSMENTS)], 'all');
+  const inferredPage = params.get('trail') || view === 'connections' ? 'ideas'
+    : lens === 'reassessed' || REASSESSMENTS[lens] ? 'reassessments'
+      : [...params.keys()].some((key) => key !== 'page') ? 'browse' : 'discover';
   return {
     q: (params.get('q') || '').slice(0, 300),
     categories: (params.get('categories') || '').split(',').filter((id) => CATEGORIES.some((c) => c.id === id)),
     from, to, topic: params.get('topic') || '', country: params.get('country') || '', institution: params.get('institution') || '',
-    lens: valid('lens', ['all', 'context', 'reassessed', ...Object.keys(REASSESSMENTS)], 'all'),
-    view: valid('view', ['timeline', 'catalogue', 'connections'], 'timeline'),
+    lens, view,
+    page: valid('page', ['discover', 'browse', 'ideas', 'reassessments'], inferredPage),
     group: valid('group', ['decade', 'year', 'category', 'topic', 'country', 'institution'], 'decade'),
     sort: valid('sort', ['newest', 'oldest'], 'newest'),
     prize: params.get('prize') || '', trail: params.get('trail') || '',
+    bucket: (params.get('bucket') || '').slice(0, 300),
+    connection: (params.get('connection') || '').slice(0, 100),
+    focus: (params.get('focus') || '').slice(0, 40),
   };
 }
 
 export function writeState(state, bounds) {
   const params = new URLSearchParams();
-  for (const key of ['q', 'topic', 'country', 'institution', 'prize', 'trail']) if (state[key]) params.set(key, state[key]);
+  for (const key of ['q', 'topic', 'country', 'institution', 'prize', 'trail', 'bucket', 'connection', 'focus']) if (state[key]) params.set(key, state[key]);
   if (state.categories.length) params.set('categories', state.categories.join(','));
   if (state.from !== bounds.min) params.set('from', state.from);
   if (state.to !== bounds.max) params.set('to', state.to);
-  for (const [key, fallback] of Object.entries({ lens: 'all', view: 'timeline', group: 'decade', sort: 'newest' })) {
-    if (state[key] !== fallback) params.set(key, state[key]);
+  for (const [key, fallback] of Object.entries({ lens: 'all', view: 'catalogue', group: 'decade', sort: 'newest' })) {
+    if (state[key] && state[key] !== fallback) params.set(key, state[key]);
   }
+  // Explicit page identity keeps shared URLs stable even when their filters are empty.
+  if (state.page) params.set('page', state.page);
+  if (state.page === 'discover' && params.size === 1) params.delete('page');
   return params.toString();
 }

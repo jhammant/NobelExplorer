@@ -103,13 +103,16 @@ test('every deep-dive section and glossary definition renders alongside the unch
   const catalog = build();
   const entry = fixture.entries[0];
   const html = render(catalog);
+  // Glossary anchors and paragraph breaks can divide the HTML without changing
+  // the explanation a reader sees. Preserve the complete wording assertion.
+  const visibleText = html.replace(/<\/p>/g, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ');
 
   assert.ok(html.includes('id="prize-deep-dive"'));
   assert.ok(html.includes('In more detail'));
   assert.match(html, /<dl\b[^>]*class="[^"]*\bkey-terms\b/);
   for (const section of entry.sections) {
     assert.ok(html.includes(escape(section.heading)), section.heading);
-    assert.ok(html.includes(escape(section.body)), section.heading);
+    assert.ok(visibleText.includes(escape(section.body).replace(/\s+/g, ' ')), section.heading);
   }
   for (const term of entry.terms) {
     assert.ok(html.includes(escape(term.term)), term.term);
