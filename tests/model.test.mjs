@@ -72,7 +72,7 @@ test('organisations have founding country and names rather than missing person f
 });
 
 test('reassessment lenses distinguish disproven claims, harms and disputed credit', () => {
-  assert.deepEqual(filterPrizes(prizes, { lens: 'overturned' }).map((p) => p.id), ['1926-medicine']);
+  assert.deepEqual(filterPrizes(prizes, { lens: 'overturned' }).map((p) => p.id), ['1926-medicine', '1938-physics']);
   assert.ok(filterPrizes(prizes, { lens: 'harmful' }).some((p) => p.id === '1949-medicine'));
   assert.ok(filterPrizes(prizes, { lens: 'credit' }).some((p) => p.id === '1962-medicine'));
   assert.equal(filterPrizes(prizes, { lens: 'reassessed' }).length, catalog.meta.reassessmentCount);

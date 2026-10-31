@@ -3,10 +3,12 @@ import { CATEGORIES, REASSESSMENTS, categoryId, inferTopics } from '../site/mode
 const english = (value) => value?.en || '';
 const unique = (items) => [...new Set(items.filter(Boolean))];
 
-export function createCatalog(rawPrizes, rawLaureates, editorial, snapshot, explanations) {
+export function createCatalog(rawPrizes, rawLaureates, editorial, snapshot, explanations, deepDives) {
+  if (deepDives && !Array.isArray(deepDives.entries)) throw new Error('Deep-dive entries must be an array');
   const people = new Map(rawLaureates.laureates.map((p) => [p.id, p]));
   const notes = new Map(editorial.entries.map((e) => [e.id, e]));
   const stories = new Map((explanations?.entries || []).map((e) => [e.id, e]));
+  const articles = new Map((deepDives?.entries || []).map((entry) => [entry?.id, entry]));
   const lifeEvent = (event) => event ? { date: event.date || event.year || '', place: english(event.place?.locationString) } : undefined;
   const prizes = rawPrizes.nobelPrizes.filter((p) => p.laureates?.length).map((prize) => {
     const category = categoryId(english(prize.category));
@@ -44,10 +46,12 @@ export function createCatalog(rawPrizes, rawLaureates, editorial, snapshot, expl
       topicOrigin: entry ? 'editorial' : 'keyword',
       ...(explanation ? { explanation, title: explanation.title, summary: explanation.overview } : {}),
       ...(entry || {}),
+      ...(articles.has(id) ? { deepDive: articles.get(id) } : {}),
     };
   });
   validateEditorial(prizes, editorial);
   if (explanations) validateExplanations(prizes, explanations);
+  if (deepDives) validateDeepDives(prizes, deepDives);
   const years = prizes.map((p) => p.year);
   const ids = new Set(prizes.flatMap((p) => p.recipients.map((r) => r.id)));
   return {
@@ -57,6 +61,7 @@ export function createCatalog(rawPrizes, rawLaureates, editorial, snapshot, expl
       laureateCount: ids.size,
       contextCount: editorial.entries.length,
       explanationCount: stories.size,
+      deepDiveCount: articles.size,
       reassessmentCount: editorial.entries.filter((p) => p.reassessment).length,
       connectionCount: editorial.connections.length,
       source: 'https://api.nobelprize.org/2.1/nobelPrizes',
@@ -64,6 +69,39 @@ export function createCatalog(rawPrizes, rawLaureates, editorial, snapshot, expl
     },
     prizes, connections: editorial.connections, trails: editorial.trails,
   };
+}
+
+export function validateDeepDives(prizes, collection) {
+  const ids = new Set(prizes.map((prize) => prize.id));
+  const seen = new Set();
+  const hasText = (value) => typeof value === 'string' && value.trim().length > 0;
+  if (!Array.isArray(collection.entries)) throw new Error('Deep-dive entries must be an array');
+  for (const entry of collection.entries) {
+    if (!entry || !ids.has(entry.id) || seen.has(entry.id)) throw new Error(`Invalid or duplicate deep-dive ID: ${entry?.id}`);
+    seen.add(entry.id);
+    for (const key of ['sections', 'terms', 'sources']) {
+      if (!Array.isArray(entry[key]) || !entry[key].length) throw new Error(`Deep-dive ${key} array required: ${entry.id}`);
+    }
+    const sources = new Set();
+    for (const source of entry.sources) {
+      let validUrl = false;
+      try { validUrl = typeof source?.url === 'string' && source.url.startsWith('https://') && new URL(source.url).protocol === 'https:'; } catch { /* Report the prize and source below. */ }
+      if (!hasText(source?.id) || sources.has(source.id) || !hasText(source.title) || !validUrl) {
+        throw new Error(`Invalid or duplicate deep-dive source: ${entry.id}/${source?.id}`);
+      }
+      sources.add(source.id);
+    }
+    for (const [key, fields] of [['sections', ['heading', 'body']], ['terms', ['term', 'definition']]]) {
+      for (const item of entry[key]) {
+        if (!item || fields.some((field) => !hasText(item[field]))) throw new Error(`Missing deep-dive ${key} prose: ${entry.id}`);
+        if (!Array.isArray(item.sourceIds) || !item.sourceIds.length || item.sourceIds.some((id) => !sources.has(id))) {
+          throw new Error(`Invalid deep-dive source reference: ${entry.id}`);
+        }
+      }
+    }
+  }
+  const missing = [...ids].filter((id) => !seen.has(id));
+  if (missing.length) throw new Error(`Missing deep dives for ${missing.length} prizes: ${missing.slice(0, 5).join(', ')}`);
 }
 
 export function validateExplanations(prizes, explanations) {

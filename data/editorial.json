@@ -892,6 +892,109 @@
           }
         ]
       }
+    },
+    {
+      "id": "2019-peace",
+      "title": "Resolving the Longstanding Border Conflict Between Ethiopia and Eritrea",
+      "summary": "Abiy Ahmed Ali received this honor for initiating a resolution to the border dispute with Eritrea and working toward international cooperation.",
+      "impact": "The agreement addressed a longstanding dispute between Ethiopia and Eritrea. The committee also hoped recognition would encourage domestic reform and regional cooperation.",
+      "detail": "The committee's January 2022 statement explained the award in terms of Abiy's actions and the expectations that existed in 2019. It also called on him to take particular responsibility for ending the conflict, describing the humanitarian situation as extremely serious and the failure of aid to reach those in need as unacceptable.",
+      "topics": [
+        "Peace & human rights"
+      ],
+      "sources": [
+        {
+          "title": "The 2019 Nobel Peace Prize announcement",
+          "url": "https://www.nobelprize.org/prizes/peace/2019/press-release/"
+        },
+        {
+          "title": "Norwegian Nobel Committee chair’s statement on Ethiopia, 13 January 2022",
+          "url": "https://www.nobelpeaceprize.org/press/press-releases/statement-by-the-chair-of-the-norwegian-nobel-committee-of-13-january-2022-on-the-situation-in-ethiopia"
+        }
+      ],
+      "reassessment": {
+        "kind": "debated",
+        "title": "The peace initiative and the later Tigray war",
+        "text": "Abiy was honoured for his peace initiative with Eritrea. The Tigray war began in November 2020. In 2021, UN and Ethiopian human-rights investigators reported violations by all sides, some potentially amounting to war crimes and crimes against humanity. In January 2022, the Nobel Committee called on Abiy to fulfil his particular responsibility to end the conflict. The federal government and TPLF reached an agreement to end hostilities in November 2022, although UN experts reported continuing grave abuses in 2023. This later record places the prize’s optimistic expectations under scrutiny.",
+        "sources": [
+          {
+            "title": "Norwegian Nobel Committee chair’s statement on Ethiopia, 13 January 2022",
+            "url": "https://www.nobelpeaceprize.org/press/press-releases/statement-by-the-chair-of-the-norwegian-nobel-committee-of-13-january-2022-on-the-situation-in-ethiopia"
+          },
+          {
+            "title": "EHRC and UN Human Rights Office: Tigray investigation findings, 3 November 2021",
+            "url": "https://ehrc.org/tigray-conflict-report-calls-for-accountability-for-violations-and-abuses-by-all-parties/"
+          },
+          {
+            "title": "African Union announcement of the Pretoria cessation-of-hostilities agreement, 2 November 2022",
+            "url": "https://server.peaceau.org/en/article/cessation-of-hostilities-agreement-between-the-government-of-the-federal-democratic-republic-of-ethiopia-and-the-tigray-peoples-liberation-front-tplf"
+          },
+          {
+            "title": "UN Geneva: International Commission of Human Rights Experts on Ethiopia briefing, 18 September 2023",
+            "url": "https://www.unognewsroom.org/teleprompter/en/1827/hrc-press-conference-international-commission-of-human-rights-experts-on-ethiopia-18-september-2023/5502"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1938-physics",
+      "title": "Creating radioactive isotopes with slow neutrons",
+      "summary": "Enrico Fermi used neutron bombardment to produce radioactive isotopes and discovered that slowing neutrons could greatly increase their interaction with atomic nuclei.",
+      "impact": "The research established neutron irradiation as a powerful experimental method. It also showed that a particle’s speed can change its likelihood of interacting with a nucleus, rather than faster particles always being more effective.",
+      "detail": "The uranium experiments illustrate how an observed result can be real while its initial explanation is later replaced. The correction concerns the identities assigned to particular reaction products.",
+      "topics": [
+        "Atoms & particles"
+      ],
+      "sources": [
+        {
+          "title": "Enrico Fermi — Nobel Prize facts and background",
+          "url": "https://www.nobelprize.org/prizes/physics/1938/fermi/facts/"
+        },
+        {
+          "title": "Otto Hahn: Enrico Fermi and Uranium Fission — IAEA Bulletin, pp. 9–11",
+          "url": "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull4-0/04004700911su.pdf"
+        }
+      ],
+      "reassessment": {
+        "kind": "overturned",
+        "title": "Uranium products misidentified as heavier elements",
+        "text": "The award recognised neutron-induced radioactivity and the enhanced effect of slow neutrons. However, some uranium irradiation products were interpreted as new elements heavier than uranium. That interpretation changed with the discovery of fission. In December 1938, Hahn and Strassmann identified barium among uranium’s reaction products; Meitner and Frisch explained the splitting process soon afterwards. Hahn later described the earlier supposed short-lived uranium products as mistaken identifications. This correction concerns the interpretation of those uranium experiments. Fermi’s broader work on neutron reactions, including the discovery of the effectiveness of slow neutrons, remained valid.",
+        "sources": [
+          {
+            "title": "1938 Physics award presentation — Nobel Prize",
+            "url": "https://www.nobelprize.org/prizes/physics/1938/ceremony-speech/"
+          },
+          {
+            "title": "Otto Hahn: Enrico Fermi and Uranium Fission — IAEA Bulletin, pp. 9–11",
+            "url": "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull4-0/04004700911su.pdf"
+          },
+          {
+            "title": "The Discovery of Nuclear Fission — Max Planck Institute for Chemistry",
+            "url": "https://www.mpic.de/4469988/die-entdeckung-der-kernspaltung"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1944-chemistry",
+      "title": "The Discovery of Splitting Heavy Atomic Nuclei",
+      "summary": "Otto Hahn was awarded the prize for nuclear fission. The discovery joined chemical evidence from Hahn and Fritz Strassmann with the physical explanation developed by Lise Meitner and Otto Frisch.",
+      "impact": "This finding established the concept of nuclear fission, providing the scientific basis for the later development of both nuclear energy production and nuclear weapons.",
+      "detail": "Chemical identification and physical explanation were distinct contributions to the discovery; the Nobel award went to Hahn. The connection with Fermi’s earlier experiments shows how the interpretation of uranium reaction products changed.",
+      "topics": [
+        "Atoms & particles",
+        "Energy & materials"
+      ],
+      "sources": [
+        {
+          "title": "Otto Hahn — Nobel Prize facts and background",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1944/hahn/facts/"
+        },
+        {
+          "title": "Max Planck Institute for Chemistry — discovery of nuclear fission",
+          "url": "https://www.mpic.de/4469988/die-entdeckung-der-kernspaltung"
+        }
+      ]
     }
   ],
   "connections": [
@@ -1461,6 +1564,23 @@
         }
       ],
       "from": "1993-literature"
+    },
+    {
+      "from": "1938-physics",
+      "to": "1944-chemistry",
+      "relation": "reinterpreted",
+      "label": "From uranium irradiation to nuclear fission",
+      "description": "Hahn and Strassmann identified barium in uranium reaction products; Meitner and Frisch explained nuclear splitting. This reinterpreted products previously assigned to heavier elements while preserving the importance of Fermi’s neutron research.",
+      "sources": [
+        {
+          "title": "Otto Hahn: Enrico Fermi and Uranium Fission — IAEA Bulletin, pp. 9–11",
+          "url": "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull4-0/04004700911su.pdf"
+        },
+        {
+          "title": "The Discovery of Nuclear Fission — Max Planck Institute for Chemistry",
+          "url": "https://www.mpic.de/4469988/die-entdeckung-der-kernspaltung"
+        }
+      ]
     }
   ],
   "trails": [

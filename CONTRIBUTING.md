@@ -29,10 +29,42 @@ an official historical account is incomplete or misleading.
 Each entry also has `id`, `title` and `sources` (a nonempty array of `title` and
 HTTPS `url`). Optional `furtherReading` links can include a `recipientId`, which
 must belong to that award. Link only to material you have verified exists.
-Keep source downloads, prompts and intermediate drafts out of Git.
+Keep source downloads, per-run prompts and intermediate drafts out of Git.
+Reusable prompt templates belong in `prompts/`.
 
 The build requires an explanation for every awarded prize in the snapshot.
 When a new year is added, research the missing explanations before publishing.
+
+## Adding depth with a local model
+
+See [the local enrichment workflow](docs/local-enrichment.md) for the reusable
+LM Studio runner, input format, resumable batches and source-review process.
+
+`data/deep-dives.json` is a separate layer of longer explanations. Each prize
+entry contains `sections` (`heading`, `body`, `sourceIds`), `terms` (`term`,
+`definition`, `sourceIds`) and `sources` (`id`, `title`, HTTPS `url`). Source IDs
+are local to their prize; every section and definition must refer to at least
+one of those sources. The production build requires coverage of every award.
+
+Start with substantive primary material: lectures, committee background,
+biographies, original papers or institutional histories. Preserve complete
+paragraphs when extracting text, including inline book titles and dates. Keep
+later events distinct from the work recognised in the award year, and carry
+existing factual corrections into the model's instructions.
+
+Use a small pilot before a batch. Our local run used Gemma 4 26B A4B in LM Studio,
+one source per request, with low-temperature generation and explicit word
+limits. A request drafts a heading, a concrete explanatory paragraph and one
+useful glossary definition. Attach the known source reference in code; do not
+ask the model to invent URLs. Combine two or three source-based sections into
+roughly 300–400 additional words per prize, without padding thin evidence.
+
+Local output is a draft. Check each claim against its cited material, especially
+dates, shared credit, historical scientific claims, medical wording and what
+an economic model actually establishes. Reject unsupported priority claims and
+causal stories. Resolve duplicate glossary terms, remove repeated introductory
+text and paraphrase source wording. Keep generation inputs, downloaded sources,
+logs and review scratch out of Git; commit only reviewed content and provenance.
 
 ## Adding extended historical context
 
@@ -86,9 +118,10 @@ the issue concerns one part. Absence of a note is not an endorsement.
 
 A connection requires `from`, `to`, `relation`, `label`, `description` and
 `sources`. Both endpoints must have editorial entries. Supported relationship
-labels are `built on`, `shared a technique`, `extended`, `challenged`, and
-`related idea`. Use the last for a thematic comparison without evidence of
-direct influence. Award order is not necessarily discovery order.
+labels include `built on`, `shared a technique`, `extended`, `challenged`,
+`reinterpreted`, and `related idea`. Use the last for a thematic comparison
+without evidence of direct influence. Award order is not necessarily discovery
+order.
 
 A trail has `id`, `title`, `description` and an ordered `prizeIds` array. A trail
 is a suggested reading route, not a claim of direct causation between all steps.

@@ -67,7 +67,7 @@
       "title": "Developing Serum Therapy for Diphtheria Treatment and Prevention",
       "overview": "Emil von Behring demonstrated that antibodies within blood plasma can be transferred between individuals to provide immunity against specific bacterial toxins.",
       "background": "Microorganisms cause many illnesses, but the body uses an immune system to defend itself. This system creates antibodies that neutralize poisons, known as toxins, produced by bacteria like diphtheria.",
-      "work": "In 1900, Emil von Behring introduced a method using serum from immune horses to treat and prevent diphtheria. Working with researchers, he showed that blood plasma contains antibodies that can be transferred between animals or people to create immunity. To allow for the large-scale production of this diphtheria serum, von Behring collaborated with the chemical industry.",
+      "work": "Emil von Behring introduced a method using serum from immune horses to treat and prevent diphtheria. Working with researchers, he showed that blood plasma contains antibodies that can be transferred between animals or people to create immunity. To allow for the large-scale production of this diphtheria serum, von Behring collaborated with the chemical industry.",
       "significance": "This work provided physicians with a new medical tool to combat illness and death by utilizing transferred antibodies to neutralize bacterial toxins.",
       "sources": [
         {
@@ -2903,7 +2903,7 @@
       "id": "1920-literature",
       "title": "The Literary Recognition of Norwegian Author Knut Hamsun",
       "overview": "Knut Hamsun received this award for his writing, specifically highlighting a book that explores the connection between human labor and the natural world.",
-      "background": "Before his 1920 recognition, Hamsun gained fame with his 1890 novel, Hunger. His earlier literary style helped establish the first modern novel within Norway's creative traditions, focusing on themes of survival and individual experience.",
+      "background": "Before his 1920 recognition, Hamsun gained fame with his 1890 novel, Hunger. Regarded as a landmark of the modern Norwegian novel, it focuses on survival and individual experience.",
       "work": "Hamsun was honored for his book Growth of the Soil. In this work, he depicts settlers working to farm the wilderness. He portrays these agricultural efforts with heroic qualities similar to the ancient poet Hesiod. His writing often focuses on a preference for simple living and a rejection of modern civilization, emphasizing how people interact with nature through physical toil.",
       "significance": "The award specifically cited his epic portrayal of human cultivation. His writing style offered a unique perspective on the relationship between humanity and the environment.",
       "sources": [
@@ -2992,12 +2992,16 @@
       "title": "Discovering Nickel Steel Alloys for Precise Physical Measurements",
       "overview": "Charles Edouard Guillaume found a specific metal mixture that stays nearly the same size even when temperatures fluctuate, allowing for much more accurate scientific measurements.",
       "background": "To establish standard lengths, scientists used the metric system and a German legal meter. However, conducting very exact measurements was difficult because most materials expand or shrink as their temperature changes.",
-      "work": "In 1896, Charles Edouard Guillaume identified anomalies in nickel steel alloys. He successfully developed invar, a specific blend of nickel and steel, which exhibits almost no change in volume or length during temperature shifts. This discovery provided a stable foundation for creating highly accurate scientific instruments and improving the construction of incandescent light bulbs.",
+      "work": "In 1896, Charles Edouard Guillaume identified unusual thermal behavior in nickel-steel alloys. He developed invar, whose very small thermal expansion made it valuable for precision instruments. His wider nickel-steel research also supported the manufacture of incandescent lamps.",
       "significance": "This work enabled much more precise measurements in physics by providing materials that remain stable despite thermal changes, benefiting both scientific tools and everyday technology.",
       "sources": [
         {
           "title": "Charles Edouard Guillaume — Nobel Prize facts and background",
           "url": "https://www.nobelprize.org/prizes/physics/1920/guillaume/facts/"
+        },
+        {
+          "title": "Nickel-steel alloys — award presentation",
+          "url": "https://www.nobelprize.org/prizes/physics/1920/ceremony-speech/"
         }
       ],
       "furtherReading": [
@@ -3873,7 +3877,7 @@
       "title": "Diplomacy and the Locarno Treaty of 1925",
       "overview": "Two foreign ministers received this award for negotiating an agreement to improve relations between Germany and France following World War I.",
       "background": "After World War I, Germany faced harsh peace terms. The French occupation of German territories to collect war debts created tension. Both leaders sought to move past these conflicts to avoid future wars driven by revenge or territorial disputes.",
-      "work": "In 1925, Aristide Briand signed the Locarno agreement in Switzerland. As French Foreign Minister, Briand opposed harsh German penalties and criticized military occupations. Meanwhile, German Foreign Minister Gustav Stresemann, who previously supported territorial annexations, shifted toward initiating reconciliation with France to stabilize post-war negotiations.",
+      "work": "In 1925, Aristide Briand helped negotiate the Locarno agreements. As French Foreign Minister, Briand opposed harsh German penalties and criticized military occupations. Meanwhile, German Foreign Minister Gustav Stresemann, who previously supported territorial annexations, shifted toward initiating reconciliation with France to stabilize post-war negotiations.",
       "significance": "The 1925 treaty represented a major effort toward Franco-German reconciliation through diplomatic negotiation rather than military force or economic retaliation.",
       "sources": [
         {
@@ -4546,7 +4550,7 @@
       "overview": "In 1930, Karl Landsteiner received the Nobel Prize for identifying that different types of red blood cells exist in humans.",
       "background": "Before his findings, transferring blood between individuals to treat heavy blood loss from accidents or illnesses frequently caused dangerous, fatal reactions during the transfusion process.",
       "work": "In 1901, Karl Landsteiner identified that mixing blood from different people could cause red blood cells to clump together. He determined that humans possess distinct blood groups based on these varying cell types. This discovery provided the explanation for why previous attempts at transferring blood between patients often resulted in disastrous medical outcomes.",
-      "significance": "This work enabled doctors to perform safe blood transfusions by ensuring that only compatible blood groups are matched during the procedure.",
+      "significance": "This work made transfusions safer by identifying a major source of incompatibility between donor and recipient blood.",
       "sources": [
         {
           "title": "Karl Landsteiner — Nobel Prize facts and background",
@@ -4977,7 +4981,7 @@
       "title": "Discovering How Chromosomes Carry Genetic Information",
       "overview": "Thomas Hunt Morgan identified how chromosomes act as the physical carriers for genes that determine an organism's inherited traits.",
       "background": "During the early 1900s, scientists sought to understand the mechanical process of inheritance. The biological connection between cellular structures and passing traits remained unproven until detailed observations were made using specific organisms.",
-      "work": "During the first decade of the 20th century, Thomas Hunt Morgan performed statistical analyses on fruit fly inheritance patterns. His research demonstrated that genes reside within chromosomes inside cell nuclei. He determined that genes are arranged in linear rows and that related traits often belong to genes positioned near each other. Additionally, Morgan identified crossover, a process where segments from different chromosomes swap positions.",
+      "work": "Starting in 1910, Thomas Hunt Morgan performed statistical analyses on fruit fly inheritance patterns. His research demonstrated that genes reside within chromosomes inside cell nuclei. He determined that genes are arranged in linear rows and that related traits often belong to genes positioned near each other. Additionally, Morgan identified crossover, a process where segments from different chromosomes swap positions.",
       "significance": "These findings established the chromosome's role in heredity and provided a concrete understanding of how genetic material is organized and exchanged during reproduction.",
       "sources": [
         {
@@ -5091,13 +5095,17 @@
       "id": "1934-chemistry",
       "title": "The Discovery of Heavy Hydrogen Through Liquid Distillation",
       "overview": "Harold C. Urey identified a version of hydrogen, known as deuterium, which possesses twice the atomic weight of standard hydrogen atoms.",
-      "background": "In 1932, scientists explored isotopes, which are variations of elements with different atomic weights. Harold C. Urey investigated whether the smallest element, hydrogen, contained such different versions within its structure.",
-      "work": "Harold C. Urey performed mathematical calculations to predict how these isotopes might be composed. Using a process called distilling liquid hydrogen, he successfully extracted a heavier isotope in 1932. This substance was named deuterium because it is twice as heavy as regular hydrogen. The resulting heavy water exhibits chemical properties that are distinct from the composition of ordinary water.",
+      "background": "Scientists were investigating isotopes, forms of the same element with different atomic masses. Urey sought evidence that hydrogen also existed in a heavier form.",
+      "work": "In work published in 1932, Urey and colleagues identified deuterium after concentrating liquid hydrogen and examining its spectrum. Deuterium has about twice the mass of ordinary hydrogen. Water containing deuterium has properties that differ from ordinary water.",
       "significance": "The identification of deuterium provided a new substance with different chemical behaviors, which became useful for various applications in nuclear technology.",
       "sources": [
         {
           "title": "Harold C. Urey — Nobel Prize facts and background",
           "url": "https://www.nobelprize.org/prizes/chemistry/1934/urey/facts/"
+        },
+        {
+          "title": "Deuterium discovery — award presentation",
+          "url": "https://www.nobelprize.org/prizes/chemistry/1934/ceremony-speech/"
         }
       ],
       "furtherReading": [
@@ -6405,9 +6413,9 @@
       "id": "1945-chemistry",
       "title": "Chemical Methods for Preserving Nutrients in Agricultural Fodder",
       "overview": "Artturi Virtanen created a chemical process to protect vital nutrients in grass, helping maintain high-quality animal feed during seasons when fresh crops are unavailable.",
-      "background": "In cold climates, keeping livestock well-nourished throughout the winter is difficult because natural pastures disappear. Maintaining the nutritional value of stored hay is necessary to ensure cattle can produce milk consistently without relying on expensive imported feed.",
-      "work": "During his 1932 research, Artturi Virtanen studied the chemistry of nutrients within dairy processes. He developed a technique to protect proteins and vitamins in hay by applying hydrochloric and sulfuric acids. This chemical application interrupted specific natural processes that usually degrade food quality, allowing the grass to remain nutritious for much longer periods.",
-      "significance": "This method allowed cows to produce more nutritious milk throughout the year. It provided a way to stabilize food supplies without needing to import additional fodder.",
+      "background": "In cold climates, keeping livestock well-nourished throughout the winter is difficult because natural pastures disappear. Maintaining the nutritional value of stored fodder is necessary to ensure cattle can produce milk consistently without relying on expensive imported feed.",
+      "work": "During his 1932 research, Artturi Virtanen studied the chemistry of nutrients within dairy processes. He developed a technique to protect proteins and vitamins in green fodder by applying hydrochloric and sulfuric acids. This chemical application interrupted specific natural processes that usually degrade food quality, allowing the grass to remain nutritious for much longer periods.",
+      "significance": "The method helped preserve winter feed supplies and support the nutritional quality of dairy products. It could reduce reliance on imported fodder.",
       "sources": [
         {
           "title": "Artturi Virtanen — Nobel Prize facts and background",
@@ -6692,7 +6700,7 @@
       "id": "1946-medicine",
       "title": "Discovering How X-ray Radiation Causes Genetic Mutations",
       "overview": "Hermann Muller identified how exposing organisms to X-rays increases the frequency of sudden changes in their genetic code, known as mutations.",
-      "background": "During the late 1880s, scientists introduced the term mutation to describe sudden shifts in an organism's genetic information. These changes are a key mechanism that allows species to evolve over time and enables new species to emerge.",
+      "background": "The term mutation describes a change in an organism's hereditary material. These changes are a key mechanism that allows species to evolve over time and enables new species to emerge.",
       "work": "In 1927, Hermann Muller conducted research using fruit flies to study hereditary traits. He determined that X-ray irradiation leads to higher rates of mutation. Specifically, Muller observed that as the dose of X-rays or other ionizing radiation increased, the quantity of genetic mutations within the fly population also grew larger.",
       "significance": "This work demonstrated a direct link between radiation exposure and the production of mutations, providing a way to explain how genetic changes occur in organisms.",
       "sources": [
@@ -6808,7 +6816,7 @@
       "title": "Investigating Nitrogenous Plant Substances and Their Chemical Formation",
       "overview": "This chemistry prize honors research into alkaloids, which are nitrogen-containing plant substances that can strongly influence human physiology.",
       "background": "Plants produce various nitrogenous compounds known as alkaloids, such as morphine and quinine. Understanding how these biological products are constructed was a key challenge in chemical science.",
-      "work": "During his earlier research, Robert Robinson demonstrated that amino acids are vital to the process plants use to create alkaloids. In 1917, he developed a method to synthesize the tropinone alkaloid by combining three simpler molecules. This approach replaced older production techniques that required many complex chemical reaction steps.",
+      "work": "Robert Robinson proposed ways that plants could build alkaloids from amino-acid precursors. In 1917, he developed a method to synthesize the tropinone alkaloid by combining three simpler molecules. This approach replaced older production techniques that required many complex chemical reaction steps.",
       "significance": "Robinson's findings provided new insights into the relationship between chemistry and biology, affecting the fields of medicine and biological sciences.",
       "sources": [
         {
@@ -16233,7 +16241,7 @@
       "title": "Bearing Witness to the Holocaust and Fighting Global Indifference",
       "overview": "Elie Wiesel shared his experiences from the Holocaust to promote peace, dignity, and atonement while actively working against human indifference.",
       "background": "During World War II, Nazi German forces occupied Hungary in 1944. This period involved the deportation of Jewish families to concentration camps like Auschwitz, where mass killings and forced labor occurred under brutal conditions involving starvation and abuse.",
-      "work": "After surviving Auschwitz and the Buchenwald death march, Elie Wiesel became a primary spokesperson for Holocaust history. He used his platform as an author and philosopher to recount the genocide. His efforts focused on preventing people from adopting an indifferent attitude toward the suffering of others, viewing the fight against such apathy as a necessary part of the pursuit of peace.",
+      "work": "After surviving Nazi imprisonment in Auschwitz and Buchenwald, Elie Wiesel became a primary spokesperson for Holocaust history. He used his platform as an author and philosopher to recount the genocide. His efforts focused on preventing people from adopting an indifferent attitude toward the suffering of others, viewing the fight against such apathy as a necessary part of the pursuit of peace.",
       "significance": "Wiesel's work aimed to ensure the world remembers historical atrocities. He promoted the idea that resisting indifference is a fundamental requirement for maintaining human dignity and achieving peace.",
       "sources": [
         {
@@ -20770,7 +20778,7 @@
       "title": "Exploring Colonialism and Identity Through Narrative and Travel Writing",
       "overview": "V. S. Naipaul received this honor for combining observant storytelling with critical examination to reveal previously hidden historical accounts.",
       "background": "Born in Trinidad, V. S. Naipaul moved to the United Kingdom at eighteen. His writing often explores the complexities of post-colonial societies, focusing on themes of alienation and identity within diverse, multicultural environments.",
-      "work": "Starting with his 1957 debut novel, The Mysterious Masseur, Naipaul used travel, reportage, and fiction to document various global locations. In his 1961 breakthrough, A House for Mr. Biswas, he examined colonial life. His literary output integrates detailed observations from his international travels to investigate the presence of suppressed histories through careful narrative scrutiny.",
+      "work": "Starting with his 1957 debut novel, The Mystic Masseur, Naipaul used travel, reportage, and fiction to document various global locations. In his 1961 breakthrough, A House for Mr. Biswas, he examined colonial life. His literary output integrates detailed observations from his international travels to investigate the presence of suppressed histories through careful narrative scrutiny.",
       "significance": "His writing provides a way to perceive overlooked historical truths by connecting personal stories of identity to the broader effects of colonialism and global movement.",
       "sources": [
         {
@@ -20923,7 +20931,7 @@
       "id": "2001-physics",
       "title": "Creating New States of Matter Using Extremely Cold Atoms",
       "overview": "Scientists created a unique state of matter called a Bose-Einstein condensate by cooling specific types of atoms to temperatures near absolute zero.",
-      "background": "In 1924, Satyendra Nath Bose and Albert Einstein predicted that particles with whole-number spin would gather in the lowest energy state if kept at very low temperatures. This theoretical concept remained unproven for decades.",
+      "background": "Building on Bose's work, Einstein predicted that bosons could gather in the lowest-energy quantum state at very low temperatures. Related effects were already known in superconductors and superfluids. The challenge recognised in 2001 was producing a condensate in a dilute atomic gas.",
       "work": "In 1995, Eric Cornell and Carl Wieman demonstrated this phenomenon using a thin gas of rubidium atoms. During that same year, Wolfgang Ketterle achieved the same result using a sparse gas of sodium atoms. Both groups reached temperatures low enough to force these atoms into the predicted condensed state.",
       "significance": "The achievement provided experimental proof for the 1924 predictions and allowed for early studies into the fundamental properties of these atomic condensates.",
       "sources": [
@@ -20938,6 +20946,10 @@
         {
           "title": "Carl Wieman — Nobel Prize facts and background",
           "url": "https://www.nobelprize.org/prizes/physics/2001/wieman/facts/"
+        },
+        {
+          "title": "Nobel Prize background — Bose–Einstein condensation in dilute gases",
+          "url": "https://www.nobelprize.org/prizes/physics/2001/popular-information/"
         }
       ],
       "furtherReading": [

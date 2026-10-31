@@ -178,8 +178,12 @@ test('reassessment lenses distinguish overturned claims, harms and disputed cred
   const reassessments = editorial.entries.filter((entry) => entry.reassessment);
   await expect(page.locator('.prize-row')).toHaveCount(reassessments.length);
   await page.getByLabel('Look closer').selectOption('overturned');
-  await expect(page.locator('.prize-row')).toHaveCount(1);
-  await expect(page.locator('.prize-row')).toHaveAttribute('data-prize', '1926-medicine');
+  await expect(page.locator('.prize-row')).toHaveCount(2);
+  await expect(page.locator('.prize-row[data-prize="1926-medicine"]')).toBeVisible();
+  await page.locator('.prize-row[data-prize="1938-physics"]').click();
+  await expect(page.locator('.reassessment-box')).toContainText('remained valid');
+  await expect(page.locator('#prize-dialog')).toContainText('From uranium irradiation to nuclear fission');
+  await page.getByRole('button', { name: 'Close prize details' }).click();
   await page.getByLabel('Look closer').selectOption('harmful');
   await page.locator('.prize-row[data-prize="1949-medicine"]').click();
   await expect(page.locator('.reassessment-box')).toContainText('Moniz');
@@ -401,6 +405,8 @@ test('long shared-prize reading preserves all recipients and scrolls back to a w
   expect(await dialog.evaluate((element) => element.scrollTop)).toBeGreaterThan(100);
   expect(await dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true);
   await expect(page.getByRole('button', { name: 'Close prize details' })).toBeInViewport();
+  await expect(dialog.locator('#prize-reading-label')).toHaveText('2025 · Physics');
+  await expect(dialog.locator('#prize-reading-label')).toBeInViewport();
   expect(await documentFits(page)).toBe(true);
   await page.screenshot({ path: testInfo.outputPath('expanded-shared-prize.png'), fullPage: false });
   await page.keyboard.press('Escape');
@@ -427,6 +433,7 @@ test('expanded recipient details show life dates and navigate genuine repeat awa
   await expect(repeatLink).toHaveCount(1);
   await repeatLink.click();
   expect(new URL(page.url()).searchParams.get('prize')).toBe('1911-chemistry');
+  await expect(dialog.locator('#prize-reading-label')).toHaveText('1911 · Chemistry');
   expect(await dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true);
   await expect(dialog.locator('.recipient')).toHaveCount(1);
   await expect(dialog.locator('.prize-explanation')).toBeVisible();
@@ -455,7 +462,147 @@ test('a phrase from the new background is discoverable through the live search c
 
   await page.getByRole('searchbox').fill(words.join(' '));
 
-  await expect(page.locator(`.prize-row[data-prize="${entry.id}"]`)).toBeVisible();
-  await page.locator(`.prize-row[data-prize="${entry.id}"]`).click();
+  const matchingPrize = page.locator(`.prize-row[data-prize="${entry.id}"]`);
+  const showMore = page.getByRole('button', { name: /^Show more/ });
+  while (!(await matchingPrize.count()) && await showMore.count()) await showMore.click();
+  await expect(matchingPrize).toBeVisible();
+  await matchingPrize.click();
   await expect(page.locator('#prize-dialog [data-explanation-field="background"]')).toBeVisible();
+});
+
+const readDeepDives = async () => JSON.parse(await readFile(new URL('../data/deep-dives.json', import.meta.url), 'utf8'));
+const normalizedProse = (value) => value.replace(/\s+/g, ' ').trim();
+
+for (const [categoryName, id] of [
+  ['Physics', '2025-physics'], ['Chemistry', '1952-chemistry'], ['Medicine', '2023-medicine'],
+  ['Literature', '1954-literature'], ['Peace', '1964-peace'], ['Economics', '1969-economics'],
+]) {
+  test(`${categoryName} deep dive exposes every section and term with the right supporting sources`, async ({ page }) => {
+    const data = await readDeepDives();
+    const entry = data.entries.find((item) => item.id === id);
+    expect(entry).toBeDefined();
+    await openAtlas(page, `?prize=${id}`);
+    const dialog = page.locator('#prize-dialog');
+    const deepDive = dialog.locator('#prize-deep-dive');
+
+    await dialog.getByRole('navigation', { name: 'On this prize page' }).getByRole('button', { name: 'In more detail', exact: true }).click();
+
+    await expect(deepDive).toBeFocused();
+    for (const section of entry.sections) {
+      const heading = deepDive.getByRole('heading', { name: section.heading, exact: true });
+      await heading.scrollIntoViewIfNeeded();
+      await expect(heading).toBeVisible();
+      const sectionElement = heading.locator('..');
+      expect(normalizedProse(await sectionElement.innerText())).toContain(normalizedProse(section.body));
+      const sourceUrls = section.sourceIds.map((id) => entry.sources.find((source) => source.id === id).url);
+      const renderedUrls = await sectionElement.locator('a').evaluateAll((links) => links.map((link) => link.href));
+      expect(renderedUrls.sort()).toEqual([...sourceUrls].sort());
+    }
+    const glossary = deepDive.locator('dl.key-terms');
+    await expect(glossary.locator('dt')).toHaveText(entry.terms.map((term) => term.term));
+    for (let index = 0; index < entry.terms.length; index++) {
+      const term = entry.terms[index];
+      const definition = glossary.locator('dt').nth(index).locator('xpath=following-sibling::dd[1]');
+      await definition.scrollIntoViewIfNeeded();
+      await expect(definition).toBeVisible();
+      expect(normalizedProse(await definition.innerText())).toContain(normalizedProse(term.definition));
+      const sourceUrls = term.sourceIds.map((id) => entry.sources.find((source) => source.id === id).url);
+      const renderedUrls = await definition.locator('a').evaluateAll((links) => links.map((link) => link.href));
+      expect(renderedUrls.sort()).toEqual([...sourceUrls].sort());
+    }
+    await deepDive.locator('summary').click();
+    for (const link of await deepDive.locator('a').all()) {
+      await expect(link).toHaveAttribute('href', /^https:\/\//);
+      await expect(link).toHaveAccessibleName(/\S/);
+      await expect(link).toHaveAttribute('target', '_blank');
+      await expect(link).toHaveAttribute('rel', /noopener/);
+    }
+    expect(await documentFits(page)).toBe(true);
+    await page.getByRole('button', { name: 'Close prize details' }).click();
+    await expect(dialog).toBeHidden();
+  });
+}
+
+test('live search indexes deep-dive text and glossary definitions loaded from the catalogue', async ({ page }) => {
+  const id = '1952-chemistry';
+  await page.route('**/data/catalog.json', async (route) => {
+    const response = await route.fetch();
+    const catalog = await response.json();
+    const prize = catalog.prizes.find((item) => item.id === id);
+    prize.deepDive.sections[0].body += ' Uniqueextendedbodyneedle.';
+    prize.deepDive.terms[0].definition += ' Uniqueextendeddefinitionneedle.';
+    await route.fulfill({ response, json: catalog });
+  });
+  await openAtlas(page, '?view=catalogue');
+
+  for (const query of ['Uniqueextendedbodyneedle', 'Uniqueextendeddefinitionneedle']) {
+    await page.getByRole('searchbox').fill(query);
+    await expect(page.locator('.prize-row')).toHaveCount(1);
+    await expect(page.locator('.prize-row')).toHaveAttribute('data-prize', id);
+  }
+  await page.locator('.prize-row').click();
+  await page.getByRole('navigation', { name: 'On this prize page' }).getByRole('button', { name: 'In more detail', exact: true }).click();
+  await expect(page.locator('#prize-deep-dive')).toContainText('Uniqueextendeddefinitionneedle');
+});
+
+test('extended reading preserves keyboard focus, opens cited evidence and closes from the glossary', async ({ page, context }, testInfo) => {
+  const id = '2025-physics';
+  const data = await readDeepDives();
+  const entry = data.entries.find((item) => item.id === id);
+  const firstSource = entry.sources.find((source) => source.id === entry.sections[0].sourceIds[0]);
+  await context.route(firstSource.url, (route) => route.fulfill({ contentType: 'text/html', body: '<!doctype html><title>Evidence navigation probe</title><p>Source destination reached.</p>' }));
+  await openAtlas(page, '?from=2025&to=2025&categories=physics&view=catalogue');
+  const opener = page.locator(`.prize-row[data-prize="${id}"]`);
+  await opener.click();
+  const dialog = page.locator('#prize-dialog');
+  const deepDive = dialog.locator('#prize-deep-dive');
+  await dialog.getByRole('navigation', { name: 'On this prize page' }).getByRole('button', { name: 'In more detail', exact: true }).click();
+  await expect(deepDive).toBeFocused();
+  await page.keyboard.press('Tab');
+  expect(await deepDive.evaluate((element) => element.contains(document.activeElement))).toBe(true);
+  const link = deepDive.locator('.deep-dive-section').first().locator('.inline-sources a').first();
+  await expect(link).toHaveAttribute('href', firstSource.url);
+  const popupPromise = page.waitForEvent('popup');
+  await link.click();
+  const evidencePage = await popupPromise;
+  await evidencePage.waitForLoadState();
+  expect(evidencePage.url()).toBe(firstSource.url);
+  expect(await evidencePage.evaluate(() => window.opener)).toBeNull();
+  await evidencePage.close();
+  await deepDive.locator('.key-terms dd').last().scrollIntoViewIfNeeded();
+  await expect(dialog.getByRole('button', { name: 'Close prize details' })).toBeInViewport();
+  expect(await dialog.evaluate((element) => element.scrollTop)).toBeGreaterThan(100);
+  expect(await documentFits(page)).toBe(true);
+  await page.screenshot({ path: testInfo.outputPath('extended-glossary.png') });
+  await page.keyboard.press('Escape');
+  await expect(dialog).toBeHidden();
+  await expect(opener).toBeFocused();
+  await opener.click();
+  await dialog.locator('.key-terms dd').last().scrollIntoViewIfNeeded();
+  await dialog.getByRole('button', { name: 'Close prize details' }).click();
+  await expect(dialog).toBeHidden();
+  await expect(opener).toBeFocused();
+});
+
+test('model-generated deep-dive prose remains text when it contains executable-looking markup', async ({ page }) => {
+  const id = '1952-chemistry';
+  const hostile = '<img src=x onerror="window.deepDiveInjected=true"> <script>window.deepDiveInjected=true</script>';
+  await page.route('**/data/catalog.json', async (route) => {
+    const response = await route.fetch();
+    const catalog = await response.json();
+    const entry = catalog.prizes.find((item) => item.id === id).deepDive;
+    entry.sections[0].heading = `Heading ${hostile}`;
+    entry.sections[0].body = `Body ${hostile}`;
+    entry.terms[0].term = `Term ${hostile}`;
+    entry.terms[0].definition = `Definition ${hostile}`;
+    entry.sources[0].title = `Source ${hostile}`;
+    await route.fulfill({ response, json: catalog });
+  });
+  await openAtlas(page, `?prize=${id}`);
+  const deepDive = page.locator('#prize-deep-dive');
+
+  await expect(deepDive.locator('img, script')).toHaveCount(0);
+  for (const label of ['Heading', 'Body', 'Term', 'Definition']) await expect(deepDive).toContainText(`${label} ${hostile}`);
+  expect(await page.evaluate(() => window.deepDiveInjected)).toBeUndefined();
+  expect(await documentFits(page)).toBe(true);
 });

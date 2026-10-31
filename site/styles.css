@@ -211,6 +211,17 @@
   .detail-section h3 { font-size: 19px; margin-bottom: 11px; }
   .detail-section p { font-size: 14px; line-height: 1.85; color: #516b7e; }
   .prize-explanation p { font-size: 15px; line-height: 1.9; }
+  .deep-dive-section { margin: 24px 0; }
+  .deep-dive-section h4 { font-size: 17px; font-weight: 600; margin-bottom: 9px; line-height: 1.4; }
+  .deep-dive-section p { font-size: 15px; line-height: 1.9; }
+  .inline-sources { font-size: 11px; white-space: nowrap; margin-left: 3px; color: #275d89; }
+  .inline-sources a { display: inline-block; padding: 1px 3px; text-decoration: none; }
+  .inline-sources a:hover { text-decoration: underline; }
+  .key-terms-panel { background: #edf4f8; border: 1px solid var(--line); border-radius: 7px; padding: 22px; margin: 24px 0; }
+  .key-terms-panel h4 { font-size: 16px; }
+  .key-terms { font-size: 13px; line-height: 1.8; }
+  .key-terms dt { font-weight: 600; margin-top: 16px; }
+  .key-terms dd { color: #516b7e; margin: 4px 0 0; }
   .recipient { margin: 24px 0; padding: 22px; border: 1px solid var(--line); border-radius: 8px; background: white; }
   .recipient h4 { font-size: 17px; font-weight: 600; }
   .recipient-full-name { font-size: 11px !important; margin: 2px 0; }

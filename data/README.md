@@ -21,12 +21,28 @@ prize. `furtherReading` links point to biographies, lectures or fuller award mat
 official source pages. They are reading recommendations, not additional claims
 of influence between prizes.
 
+`deep-dives.json` adds longer sections and a small glossary for every award.
+Drafts were produced locally with Gemma 4 26B A4B through LM Studio, using
+one identified source per generation request. The inputs include official
+committee background, award speeches, lectures, biographies, original papers
+and institutional histories. Each section and definition has `sourceIds`
+referring to that award's own source list; those references are attached by
+the preparation program rather than invented by the model. Existing short
+explanations and official records are preserved as separate layers.
+
+Drafts are checked for source support, attribution, chronology, overstatement,
+formatting and useful added detail before inclusion. Older sources are read
+alongside the existing reassessments. Lecture dates may follow the award year,
+and retrospective biographies can discuss later work. The linked sources
+remain the place to examine the original evidence and the limits of these
+AI-assisted explanations.
+
 `editorial.json` contains extended explanations, historical reassessments,
 labelled connections and discovery trails, with supporting sources beside the
-claims. Both collections were drafted with AI assistance. Coverage, references
+claims. The editorial collections were drafted with AI assistance. Coverage, references
 and rendering are checked for the full collection; factual review includes
 source comparison and focused checks on split awards and disputed claims.
-Neither collection has undergone independent specialist peer review.
+These collections have not undergone independent specialist peer review.
 Contributions and corrections are welcome. This layer is licensed under
 [CC BY 4.0](../LICENSE-CONTENT). The linked works retain their own rights.
 

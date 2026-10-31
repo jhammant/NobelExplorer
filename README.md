@@ -18,6 +18,8 @@ evidence or historical debate changed.
 - Switch between the timeline, catalogue and a map of sourced connections.
 - Follow six discovery trails, from reading DNA to debates about peace.
 - Read every prize's historical setting, the work itself and why it mattered.
+- Explore a longer explanation with concrete examples, development of the work
+  and a glossary, with supporting sources beside each section.
 - See each recipient's original citation, prize share, life dates, places and
   affiliations, with direct links to their other Nobel awards.
 - Go deeper with official biographies, Nobel lectures and award background.
@@ -25,15 +27,16 @@ evidence or historical debate changed.
 
 The current snapshot contains **639 awarded prizes and 1,028 unique laureates**,
 covering **1901–2026**. All **639 prizes have sourced plain-English
-explanations**, alongside their unchanged official citations. A further
-**44 extended historical notes, 35 connections and 9 reassessments** offer
+explanations and longer sourced articles**, including **1,610 detailed sections
+with matching glossary entries**, alongside their unchanged official citations. A further
+**47 extended historical notes, 36 connections and 11 reassessments** offer
 additional context. The explanations were drafted with AI assistance from
 official Nobel background material and other authoritative sources; they are
 not independently peer reviewed.
 There is no claim that all controversies or scientific connections have been
 identified.
 
-![Expanded prize page with the historical setting, contribution and significance](docs/images/prize-detail.png)
+![A longer prize article with source citations and an explanatory glossary](docs/images/deep-dive.png)
 
 ## Run locally
 
@@ -48,6 +51,10 @@ npm run dev
 Open [localhost:4173](http://127.0.0.1:4173). After edits to the source or data,
 run `npm run build` and refresh. The server serves the exact static output that
 GitHub Pages publishes.
+
+To draft additional source-based detail with a local model, see the
+[local enrichment workflow](docs/local-enrichment.md). Drafting is a separate
+maintenance step; visitors never need a model running.
 
 ```bash
 npm run check
@@ -74,6 +81,7 @@ mobile overflow and recovery from a failed data request.
 ```text
 data/nobel-prizes.json + data/laureates.json     Official snapshots
 data/explanations.json                         Background for every prize
+data/deep-dives.json                           Detailed sections and key concepts
 data/editorial.json                            Extended context and connections
                    ↓
 scripts/catalog.mjs                            Join and validate
@@ -117,8 +125,8 @@ The refresh script follows pagination, checks record counts and refuses a
 shrinking dataset. It fetches both datasets before replacing the snapshot.
 Review the diff before publishing. The editorial collection is maintained
 separately: refreshing official records never generates or changes commentary.
-If the snapshot introduces a new award, add its sourced explanation before
-building: incomplete explanation coverage fails the build rather than
+If the snapshot introduces a new award, add its sourced explanation and
+deep-dive entry before building: incomplete coverage fails the build rather than
 publishing a new prize with an empty story.
 Review the snapshot-count assertions in `tests/model.test.mjs` when a new year
 is added. Scheduled refreshes are not enabled.

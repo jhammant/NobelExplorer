@@ -55,6 +55,8 @@ export function searchText(prize) {
     prize.impact, prize.detail, ...prize.topics,
     prize.explanation?.title, prize.explanation?.overview, prize.explanation?.background,
     prize.explanation?.work, prize.explanation?.significance,
+    ...(prize.deepDive?.sections || []).flatMap((section) => [section.heading, section.body]),
+    ...(prize.deepDive?.terms || []).flatMap((term) => [term.term, term.definition]),
     prize.reassessment?.title, prize.reassessment?.text,
     ...prize.recipients.flatMap((person) => [person.name, person.fullName, person.motivation, person.country, ...person.affiliations]),
   ].filter(Boolean).join(' '));

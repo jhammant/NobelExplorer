@@ -99,6 +99,7 @@ function openPrize(id, push = true) {
   if (!dialog.open) returnFocus = document.activeElement;
   state.prize = id;
   $('#prize-content').innerHTML = detail(prize, lookup, catalog.connections, selectedTrail());
+  $('#prize-reading-label').textContent = `${prize.year} · ${category(prize.category).name}`;
   saveUrl(push);
   if (!dialog.open) dialog.showModal();
   const heading = $('#prize-title');
