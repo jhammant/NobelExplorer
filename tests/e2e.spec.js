@@ -1,5 +1,10 @@
 import { test, expect } from '@playwright/test';
-import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { createServer } from 'node:http';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { packageSite } from '../scripts/package-site.mjs';
 
 const raw = JSON.parse(await readFile(new URL('../data/nobel-prizes.json', import.meta.url), 'utf8'));
 const editorial = JSON.parse(await readFile(new URL('../data/editorial.json', import.meta.url), 'utf8'));
@@ -94,6 +99,72 @@ test.beforeEach(async ({ page }) => {
 
 test.afterEach(async ({ page }) => {
   expect(page.__qaErrors).toEqual([]);
+});
+
+test('normal reload upgrades a cached release with matching nested modules, styles and catalogue', async ({ page }) => {
+  const directory = await mkdtemp(join(tmpdir(), 'nobel-cache-upgrade-'));
+  let server;
+  const requests = [];
+  try {
+    const source = join(directory, 'site');
+    await mkdir(source);
+    const releases = [];
+    for (const [label, color] of [['A', 'rgb(180, 20, 30)'], ['B', 'rgb(20, 110, 50)']]) {
+      const files = {
+        'index.html': `<!doctype html><html><head><link rel="icon" href="data:,"><link rel="stylesheet" href="./styles.css"><script type="module" src="./app.js"></script></head><body><h1>Release ${label}</h1><p id="result">Loading</p></body></html>`,
+        'app.js': 'import { value } from "./model.js"; const response = await fetch(new URL("./data/catalog.json", import.meta.url)); const catalog = await response.json(); document.querySelector("#result").textContent = `${value}:${catalog.release}`;',
+        'model.js': 'export { value } from "./copy.js";',
+        'copy.js': `export const value = '${label}';`,
+        'styles.css': '@import "./palette.css"; #result { color: var(--ink); }',
+        'palette.css': `:root { --ink: ${color}; }`,
+      };
+      await Promise.all(Object.entries(files).map(([name, body]) => writeFile(join(source, name), body)));
+      const destination = join(directory, label);
+      const version = await packageSite({ source, destination, catalog: { release: label } });
+      releases.push({ label, color, destination, version });
+    }
+
+    let activeRelease = releases[0];
+    const mime = { html: 'text/html', js: 'application/javascript', css: 'text/css', json: 'application/json' };
+    server = createServer(async (request, response) => {
+      const name = new URL(request.url, 'http://localhost').pathname.replace(/^\/NobelExplorer\//, '') || 'index.html';
+      try {
+        const body = await readFile(join(activeRelease.destination, name));
+        const etag = `"${createHash('sha256').update(body).digest('hex')}"`;
+        const status = request.headers['if-none-match'] === etag ? 304 : 200;
+        requests.push({ release: activeRelease.label, name, status });
+        response.writeHead(status, { 'Content-Type': mime[name.split('.').at(-1)] || 'application/octet-stream', 'Cache-Control': 'max-age=600', ETag: etag });
+        response.end(status === 304 ? undefined : body);
+      } catch {
+        requests.push({ release: activeRelease.label, name, status: 404 });
+        response.writeHead(404);
+        response.end('Not found');
+      }
+    });
+    await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+    const url = `http://127.0.0.1:${server.address().port}/NobelExplorer/?prize=fixture`;
+
+    // Warm the real browser HTTP cache, then publish a different tree at the same origin.
+    await page.goto(url);
+    await expect(page.locator('#result')).toHaveText('A:A');
+    await expect(page.locator('#result')).toHaveCSS('color', releases[0].color);
+    activeRelease = releases[1];
+    await page.reload();
+
+    await expect(page.getByRole('heading')).toHaveText('Release B');
+    await expect(page.locator('#result')).toHaveText('B:B');
+    await expect(page.locator('#result')).toHaveCSS('color', releases[1].color);
+    await expect(page).toHaveURL(url);
+    const upgradedRequests = requests.filter((request) => request.release === 'B');
+    expect(upgradedRequests.every((request) => request.status === 200)).toBe(true);
+    for (const name of ['app.js', 'model.js', 'copy.js', 'styles.css', 'palette.css', 'data/catalog.json']) {
+      expect(upgradedRequests.map((request) => request.name)).toContain(`assets/${releases[1].version}/${name}`);
+    }
+    await test.info().attach('cache-upgrade-requests', { body: JSON.stringify({ versions: releases.map(({ label, version }) => ({ label, version })), requests }, null, 2), contentType: 'application/json' });
+  } finally {
+    if (server?.listening) await new Promise((resolve) => { server.close(resolve); server.closeAllConnections(); });
+    await rm(directory, { recursive: true, force: true });
+  }
 });
 
 test('all awards are available in timeline and catalogue pagination', async ({ page }) => {

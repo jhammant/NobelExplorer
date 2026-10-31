@@ -97,6 +97,13 @@ scripts/build.mjs                              Package static files
 dist/                                         GitHub Pages
 ```
 
+The build gives each complete set of scripts, styles, fonts and data a
+content-based `assets/<version>/` path. The page refers to that version so a
+normal reload after deployment cannot mix new markup with cached old modules.
+Relative module imports, fonts and the catalogue remain in the same versioned
+tree. Original public asset and catalogue URLs remain available for existing
+links and tooling.
+
 `site/model.js` holds the search, filtering, grouping and URL-state logic.
 `site/discovery.js` renders the opening story and its sourced idea path.
 `site/explorer-views.js` renders groups, the timeline, trails and connections.
